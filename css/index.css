@@ -329,14 +329,11 @@ padding: 0 10 0 10
 .blacktittle{
     font-size: 20px;
 }
-.overlay{
-    width: 100px;
-    height: 66.537px;
-}
+
 .container{
     
     display: grid;
-    grid-template: 25px 550px 50px 350px 70px 400px 40px 100px 500px 50px/ 1fr 1fr;
+    grid-template: 25px 550px 50px 300px 100px 325px 50px 100px 500px 50px/ 1fr 1fr;
     height: 100vh;
    
     grid-template-areas: "logo nav"
@@ -378,7 +375,7 @@ padding: 0 10 0 10
 .nosotros{
     padding: 0px;
     width: 100vw;
-    grid-template: repeat(2,120px) /repeat(4,120px);
+    grid-template: repeat(2,95px) /repeat(4,95px);
     justify-content: center;
     align-content: center;
 }
@@ -389,6 +386,101 @@ padding: 0 10 0 10
 .tittle-gallery img{
     padding: 10px;
     width: 15px;
+}
+.overlay{
+    width: 150px;
+    height: 99.813px;
+}
+.post-list{
+    grid-template: repeat(3,83.175px )/ repeat(3,125px );
+    width: 100vw;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.post-image img {
+    width: 125px; 
+}
+.icon-contactanos img{
+    width: 15px;
+}
+.mapawidth{
+    width: 375px;
+    height: 375px;
+}
+.footer h3{
+    font-size: 15px;
+}
+}
+@media (min-width:500px) and (max-width:650px){
+    .whitetittle{
+        font-size: 30px;
+        font-family: 'hestina';
+    }
+.blacktittle{
+    font-size: 30px;
+}
+
+.container{
+    
+    display: grid;
+    grid-template: 25px 550px 80px 400px 100px 400px 50px 125px 500px 50px/ 1fr 1fr;
+    height: 100vh;
+   
+    grid-template-areas: "logo nav"
+                         "contenido contenido"
+                          "tittle-nosotros tittle-nosotros"
+                         "nosotros nosotros"
+                         "tittle-gallery tittle-gallery"
+                         "post-list post-list"
+                         "o o"
+                         "tittle-contactanos tittle-contactanos"
+                         "contactanos contactanos"
+                         "footer footer"
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 15px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,110px) /repeat(4,110px);
+    justify-content: center;
+    align-content: center;
+}
+.tittle-gallery{
+width: 100vw;
+margin: 20px 0px 20px 0px;
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 15px;
+}
+.overlay{
+    width: 150px;
+    height: 99.813px;
 }
 .post-list{
     grid-template: repeat(3,99.813px )/ repeat(3,150px );
