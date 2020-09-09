@@ -1,11 +1,413 @@
 body{
     margin: 0;
+    
 }
-header{
+.container{
     display: grid;
-    border: solid black;
-    grid-template: 200px 200px 200px /200px 200px 200px ;
+    grid-template: 50px 700px 80px 0.15fr 120px 0.15fr 40px 100px 950px 50px/ 1fr 1fr;
+    height: 100vh;
+   
+    grid-template-areas: "logo nav"
+                         "contenido contenido"
+                          "tittle-nosotros tittle-nosotros"
+                         "nosotros nosotros"
+                         "tittle-gallery tittle-gallery"
+                         "post-list post-list"
+                         "o o"
+                         "tittle-contactanos tittle-contactanos"
+                         "contactanos contactanos"
+                         "footer footer"
+   
+                         
 }
-.item{
-    background-color: blueviolet;
+
+.logo-header{
+    width: 150px;
+    margin: 0px;
+}
+.item:nth-of-type(1){
+    background-color: black;
+}
+.logo{
+    grid-area: logo;
+}
+.nav{
+    grid-area: nav;
+ 
+
+}
+.contenido{
+    grid-area: contenido;
+    background-image: url('../img/portada.png') ;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    
+}
+.tittle-nosotros{
+    grid-area: tittle-nosotros;
+    background: #23272E;
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.nosotros{
+    grid-area: nosotros;
+    display: grid;
+    grid-template: repeat(2,200px) /repeat(4,200px);
+    justify-content: center;
+    background-color: #23272E;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+.subitem.foto{
+    background-image: url(../img/foto.jpg);
+    background-size: cover;
+    grid-column: 3/5;
+    grid-row: 1/3;
+   
+    
+}
+.subitem.texto{
+    background: white;
+    grid-column: 1/3;
+    grid-row: 1/3;
+   
+    padding: 30px;
+    
+}
+.subitem.texto h2{
+    color:black;
+    
+    margin: 0;
+}
+.subitem.texto p{
+    text-align: start;
+    font-family: arial;
+}
+.footer{
+    grid-area: footer;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+    height: 100%;
+    background-color: black;
+    margin: 0;
+
+}
+nav a{
+    cursor: pointer;
+    color: white;
+    
+    padding: 15px;
+   
+}
+nav a:hover{
+    background-color: white;
+    color: black;
+    transition: 2s;}
+
+    .tittle-gallery{
+        grid-area: tittle-gallery;
+        text-align: center;
+        font-family: 'hestina';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        flex-direction: column;
+       
+     
+    
+
+    }
+    .tittle-gallery img{
+        padding: 15px;
+    }
+    .tittle-gallery h1{
+       margin: 0;
+    }
+.post{
+    position: relative;
+  
+    display: FLEX;
+    
+}
+.post-list{
+    grid-area: post-list;
+    
+    position: relative;
+    display: grid;
+    grid-template: repeat(3,166.360px )/ repeat(3,250px );
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+.post-image{
+    margin: 0;
+    width: 250px;
+}
+.post-image img{
+    width: 250px;
+    width: 250px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 60%);
+    width: 250px;
+    height: 166.360px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.post:hover .overlay{
+    display:flex;
+}
+.o{
+    grid-area: o;
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
+}
+.o h1{
+    font-family: 'hestina';
+    font-size: 2em;
+    margin: 0;
+  
+}
+.tittle-contactanos{
+    color: white;
+    background: #23272E;
+    grid-column: 1/3;
+    text-align: center;
+    font-family: 'hestina';
+    font-size: 1.5em;
+    position: relative;
+
+}
+.contactanos{
+    grid-area: contactanos;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #23272E ;
+}
+.icon-contactanos{
+   display: flex;
+   justify-content: space-around;
+}
+.icon-contactanos img{
+    width: 30px;
+}
+.footer{
+background-color: #14171C;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: white;
+   
+}
+h3{
+   margin: 0;
+  
+}
+
+@media (min-width:320px) and (max-width:400px){
+.whitetittle{
+        font-size: 20px;
+        font-family: 'hestina';
+    }
+.blacktittle{
+    font-size: 20px;
+}
+.overlay{
+    width: 100px;
+    height: 66.537px;
+}
+.container{
+    
+    display: grid;
+    grid-template: 25px 550px 50px 200px 70px 0.15fr 40px 100px 400px 50px/ 1fr 1fr;
+    height: 100vh;
+   
+    grid-template-areas: "logo nav"
+                         "contenido contenido"
+                          "tittle-nosotros tittle-nosotros"
+                         "nosotros nosotros"
+                         "tittle-gallery tittle-gallery"
+                         "post-list post-list"
+                         "o o"
+                         "tittle-contactanos tittle-contactanos"
+                         "contactanos contactanos"
+                         "footer footer"
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 15px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,80px) /repeat(4,80px);
+    justify-content: center;
+    align-content: center;
+}
+.tittle-gallery{
+width: 100vw;
+padding: 0 10 0 10
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 15px;
+}
+.post-list{
+    grid-template: repeat(3,66.537px )/ repeat(3,100px );
+    width: 100vw;
+    gap: 1px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.contactanos{
+    height: 400px;
+    
+}
+.post-image img {
+    width: 100px; 
+}
+.icon-contactanos img{
+    width: 15px;
+}
+.mapawidth{
+    width: 300px;
+    height: 300px;
+}
+.footer h3{
+    font-size: 15px;
+}
+}
+@media (min-width:400px) and (max-width:500px){
+    .whitetittle{
+        font-size: 20px;
+        font-family: 'hestina';
+    }
+.blacktittle{
+    font-size: 20px;
+}
+.overlay{
+    width: 100px;
+    height: 66.537px;
+}
+.container{
+    
+    display: grid;
+    grid-template: 25px 550px 50px 350px 70px 400px 40px 100px 500px 50px/ 1fr 1fr;
+    height: 100vh;
+   
+    grid-template-areas: "logo nav"
+                         "contenido contenido"
+                          "tittle-nosotros tittle-nosotros"
+                         "nosotros nosotros"
+                         "tittle-gallery tittle-gallery"
+                         "post-list post-list"
+                         "o o"
+                         "tittle-contactanos tittle-contactanos"
+                         "contactanos contactanos"
+                         "footer footer"
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 15px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,120px) /repeat(4,120px);
+    justify-content: center;
+    align-content: center;
+}
+.tittle-gallery{
+width: 100vw;
+padding: 0 10 0 10
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 15px;
+}
+.post-list{
+    grid-template: repeat(3,99.813px )/ repeat(3,150px );
+    width: 100vw;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.post-image img {
+    width: 150px; 
+}
+.icon-contactanos img{
+    width: 15px;
+}
+.mapawidth{
+    width: 450px;
+    height: 450px;
+}
+.footer h3{
+    font-size: 15px;
+}
 }
