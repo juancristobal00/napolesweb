@@ -8,11 +8,12 @@
 <style>
     body{
         margin: 0;
+        
     }
     .container{
         display: grid;
-        grid-template: 50px 0.26fr 75px 0.30fr 75px 0.30fr/ 1fr 1fr;
-        height: 400vh;
+        grid-template: 50px 700px 80px 0.15fr 120px 0.15fr 40px 100px 950px 50px/ 1fr 1fr;
+        height: 100vh;
         border: green;
         grid-template-areas: "logo nav"
                              "contenido contenido"
@@ -20,6 +21,9 @@
                              "nosotros nosotros"
                              "tittle-gallery tittle-gallery"
                              "post-list post-list"
+                             "o o"
+                             "tittle-contactanos tittle-contactanos"
+                             "contactanos contactanos"
                              "footer footer"
        
                              
@@ -53,15 +57,47 @@
     }
     .tittle-nosotros{
         grid-area: tittle-nosotros;
+        background: #23272E;
+        color: white;
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
     .nosotros{
         grid-area: nosotros;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template: 200px 200px /200px 200px 200px 200px;
+        justify-content: center;
+        background-color: #23272E;
+        padding-top: 50px;
+        padding-bottom: 50px;
         
     }
-    .subitem{
-        border: 1px solid black;
+    .subitem.foto{
+        background-image: url(./img/foto.jpg);
+        background-size: cover;
+        grid-column: 3/5;
+        grid-row: 1/3;
+        border: white solid 2px;
+        
+    }
+    .subitem.texto{
+        background: white;
+        grid-column: 1/3;
+        grid-row: 1/3;
+        border: white solid 2px;
+        padding: 30px;
+        
+    }
+    .subitem.texto h2{
+        color:black;
+        
+        margin: 0;
+    }
+    .subitem.texto p{
+        text-align: start;
+        font-family: arial;
     }
     .footer{
         grid-area: footer;
@@ -97,11 +133,19 @@
             justify-content: center;
             font-size: 1.5em;
             flex-direction: column;
+            border: 1px solid white;
+            padding: 20px;
 
+        }
+        .tittle-gallery img{
+            padding: 15px;
+        }
+        .tittle-gallery h1{
+            margin: 0;
         }
     .post{
         position: relative;
-        width: ;
+      
         display: FLEX;
         
     }
@@ -121,7 +165,7 @@
     }
     .post-image img{
         width: 250px;
-        width: 166.360;
+        width: 250px;
     }
     .overlay{
         position: absolute;
@@ -140,6 +184,54 @@
     .post:hover .overlay{
         display:flex;
     }
+    .o{
+        grid-area: o;
+        border: solid 1px black;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+       
+    }
+    .o h1{
+        font-family: 'hestina';
+        font-size: 2em;
+        margin: 0;
+      
+    }
+    .tittle-contactanos{
+        color: white;
+        background: #23272E;
+        grid-column: 1/3;
+        text-align: center;
+        font-family: 'hestina';
+        font-size: 1.5em;
+
+    }
+    .contactanos{
+        grid-area: contactanos;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #23272E ;
+    }
+   .icon-contactanos{
+       display: flex;
+       justify-content: space-around;
+   }
+   .footer{
+    background-color: #14171C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+       
+   }
+   h3{
+       margin: 0;
+      
+   }
 </style>
 <body>
    <header>
@@ -162,8 +254,11 @@
                 <h2 style=" font-family: Hestina; align-self: center; justify-content: center; display: flex;">Nosotros</h2>
             </div>
             <div class="item nosotros">
-                <div class="subitem"></div>
-                <div class="subitem"></div>
+                <div class="subitem texto">
+                    <h2>Nosotros</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis odio ipsam error repellendus ullam iste doloremque, quam voluptatibus asperiores neque aliquam illo fugiat quia excepturi ducimus, illum dolores corporis magnam.</p>
+                </div>
+                <div class="subitem foto"></div>
             </div>
             <div class="item tittle-gallery"> 
                 <h1>Siguenos</h1>
@@ -270,7 +365,23 @@
                     </span>
                 </a>
             </section>
-            <div class="item footer">footer</div>
+           <div class="o"><h1>o</h1></div>
+           <div class="tittle-contactanos">
+               <h1>Contactanos</h1>
+               <div class="icon-contactanos">
+                   <img src="./img/Icono Facebook.svg" alt="" width="20px">
+                   <img src="./img/Icono Instagram.svg" alt="" width="20px">
+                   <img src="./img/Icono Whatsapp.svg" alt="" width="20px">
+               </div>
+           </div>
+           <section class="contactanos">
+            <iframe class="mapawidth" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d777.7096689707527!2d-72.605738!3d-38.767404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d1483c7980bb%3A0xada9a3955068753e!2sCollague%20398%2C%20Padre%20las%20Casas%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1597343945562!5m2!1ses!2scl" width="850" height="850" frameborder="0" style="border:0;" allowfullscreen="yes" aria-hidden="false" tabindex="0"></iframe>
+           </section>
+           <div class="item footer">
+               <h3>Darvin Andres Villalobos</h3>
+               <h3>darvin.andres.v@gmail.com</h3>
+           </div>
+            
             
         </section>
    </header>
