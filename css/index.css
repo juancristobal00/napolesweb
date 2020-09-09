@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template: 50px 0.26fr 75px 0.30fr 75px 0.30fr/ 1fr 1fr;
+    height: 400vh;
+    border: green;
+    grid-template-areas: "logo nav"
+                        "contenido contenido"
+                        "tittle-nosotros tittle-nosotros"
+                        "nosotros nosotros"
+                        "tittle-gallery tittle-gallery"
+                        "post-list post-list"
+                        "footer footer"
+
+}
+
+.item{
+    border: 3px solid black;
+}
+
+.logo-header{
+    width: 150px;
+    margin: 0px;
+}
+
+.item:nth-of-type(1){
+    background-color: black;
+}
+
+.logo{
+    grid-area: logo;
+}
+
+.nav{
+    grid-area: nav;
+    border: 0px;
+}
+
+
+.contenido{
+    grid-area: contenido;
+    background-image: url('../img/portada.png') ;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    
+}
+
+.tittle-nosotros{
+    grid-area: tittle-nosotros;
+}
+
+.nosotros{
+    grid-area: nosotros;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.subitem{
+    border: 1px solid black;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    margin: 0;
+}
+
+nav a{
+    cursor: pointer;
+    color: white;
+    padding: 15px;
+}
+
+nav a:hover{
+    background-color: white;
+    color: black;
+    transition: 2s;}
+
+    .tittle-gallery{
+        grid-area: tittle-gallery;
+        text-align: center;
+        font-family: 'hestina';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        flex-direction: column;
+}
+
+.post{
+    position: relative;
+    display: flex;
+    
+}
+
+.post-list{
+    grid-area: post-list;
+    border: 3px solid black;
+    position: relative;
+    display: grid;
+    grid-template: 166.360px 166.360px 166.360px / 250px 250px 250px;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.post-image{
+    margin: 0;
+    width: 250px;
+}
+
+.post-image img{
+    width: 250px;
+    width: 166.360;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 60%);
+    width: 250px;
+    height: 166.360px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.post:hover .overlay{
+    display:flex;
+}

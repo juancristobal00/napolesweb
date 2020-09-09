@@ -1,278 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    body{
-        margin: 0;
-    }
-    .container{
-        display: grid;
-        grid-template: 50px 0.26fr 75px 0.30fr 75px 0.30fr/ 1fr 1fr;
-        height: 400vh;
-        border: green;
-        grid-template-areas: "logo nav"
-                             "contenido contenido"
-                              "tittle-nosotros tittle-nosotros"
-                             "nosotros nosotros"
-                             "tittle-gallery tittle-gallery"
-                             "post-list post-list"
-                             "footer footer"
-       
-                             
-    }
-    .item{
-        
-        border: 3px solid black;
-    }
-    .logo-header{
-        width: 150px;
-        margin: 0px;
-    }
-    .item:nth-of-type(1){
-        background-color: black;
-    }
-    .logo{
-        grid-area: logo;
-    }
-    .nav{
-        grid-area: nav;
-       border: 0px;
-        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Napoles Barber Shop</title>
 
-    }
-    .contenido{
-        grid-area: contenido;
-        background-image: url('./img/portada.png') ;
-        background-size: 100% ;
-        background-repeat: no-repeat;
-        
-    }
-    .tittle-nosotros{
-        grid-area: tittle-nosotros;
-    }
-    .nosotros{
-        grid-area: nosotros;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        
-    }
-    .subitem{
-        border: 1px solid black;
-    }
-    .footer{
-        grid-area: footer;
-    }
-    nav{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-       
-        height: 100%;
-        background-color: black;
-        margin: 0;
-    
-    }
-    nav a{
-        cursor: pointer;
-        color: white;
-        
-        padding: 15px;
-       
-    }
-    nav a:hover{
-        background-color: white;
-        color: black;
-        transition: 2s;}
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <header>
+            <section class="container">
+                <div class="item logo">
+                    <figure class="logo-header">
+                        <img src="./img/LOGO.svg" alt="">
+                    </figure>    
+                </div>
+                <div class="item nav">
+                    <nav>
+                        <a href="#">Acerca de nosotros</a>
+                        <a href="#">Trabajos</a>
+                        <a href="#">Visitanos</a>
+                    </nav>
+                </div>
 
-        .tittle-gallery{
-            grid-area: tittle-gallery;
-            text-align: center;
-            font-family: 'hestina';
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            flex-direction: column;
-
-        }
-    .post{
-        position: relative;
-        width: ;
-        display: FLEX;
-        
-    }
-    .post-list{
-        grid-area: post-list;
-        border: 3px solid black;
-        position: relative;
-        display: grid;
-        grid-template: 166.360px 166.360px 166.360px / 250px 250px 250px;
-        gap: 10px;
-        justify-content: center;
-        align-content: center;
-    }
-    .post-image{
-        margin: 0;
-        width: 250px;
-    }
-    .post-image img{
-        width: 250px;
-        width: 166.360;
-    }
-    .overlay{
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 60%);
-        width: 250px;
-        height: 166.360px;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-    .post:hover .overlay{
-        display:flex;
-    }
-</style>
-<body>
-   <header>
-       <section class="container">
-            <div class="item logo">
-                <figure class="logo-header">
-                <img src="./img/LOGO.svg" alt="">
-                </figure>
-                
-            </div>
-            <div class="item nav">
-                <nav>
-                    <a href="">Acerca de nosotros</a>
-                    <a href="">Trabajos</a>
-                    <a href="">Visitanos</a>
-                </nav>
-            </div>
-            <div class="item contenido"></div>
-            <div class="item tittle-nosotros">
-                <h2 style=" font-family: Hestina; align-self: center; justify-content: center; display: flex;">Nosotros</h2>
-            </div>
-            <div class="item nosotros">
-                <div class="subitem"></div>
-                <div class="subitem"></div>
-            </div>
-            <div class="item tittle-gallery"> 
-                <h1>Siguenos</h1>
-                <img src="./img/logosiguenos.svg" width="30px" alt="">
-            </div>
-            <section class="post-list">
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-            </section>
+                <div class="item contenido"></div>
+                <div class="item tittle-nosotros">
+                    <h2 style=" font-family: Hestina; align-self: center; justify-content: center; display: flex;">Nosotros</h2>
+                </div>
+                <div class="item nosotros">
+                    <div class="subitem"></div>
+                    <div class="subitem"></div>
+                </div>
+                <div class="item tittle-gallery"> 
+                    <h1>Siguenos</h1>
+                    <img src="./img/logosiguenos.svg" width="30px" alt="">
+                </div>
+                <section class="post-list">
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                    <a href="" class="post">
+                        <figure class="post-image">
+                            <img src="./img/du (4).jfif" alt="">
+                        </figure>
+                        <span class="overlay">
+                            <p>
+                                <span class="comments">150</span>
+                                <span class="likes">200</span>
+                            </p>
+                        </span>
+                    </a>
+                </section>
             <div class="item footer">footer</div>
-            
         </section>
-   </header>
+    </header>
 </body>
 </html>
