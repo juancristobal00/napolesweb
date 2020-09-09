@@ -2,12 +2,61 @@ body{
     margin: 0;
     
 }
+.burger{
+    color: white;
+    margin: 10;
+    height: 30px;
+    float: right;
+    width: 30px;
+    display: none;
+}
+.burgerclose{
+    color: white;
+    margin: 10;
+    height: 20px;
+    float: right;
+    width: 20px;
+    display: none;
+    padding: 5 ;}
+.link{
+    color: white;
+    padding: 20px;
+}
+.link:hover{
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+header{
+    height: 60px;
+    background-color: black;
+    position: relative;
+}
+nav{
+    color: white;
+    float: right;
+    margin: 1px;
+    height: 50px;
+    width: 270px;
+    margin: 15;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+
+
+.header-logo {
+    width: 200px;
+    height: 50px;
+}
 .container{
     display: grid;
-    grid-template: 50px 700px 80px 0.15fr 120px 0.15fr 40px 100px 950px 50px/ 1fr 1fr;
+    grid-template:  700px 80px 0.15fr 135px 600px 40px 100px 1050px 50px/ 1fr 1fr;
     height: 100vh;
    
-    grid-template-areas: "logo nav"
+    grid-template-areas: 
                          "contenido contenido"
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
@@ -21,26 +70,19 @@ body{
                          
 }
 
-.logo-header{
-    width: 150px;
-    margin: 0px;
-}
+
 .item:nth-of-type(1){
     background-color: black;
 }
-.logo{
-    grid-area: logo;
-}
-.nav{
-    grid-area: nav;
- 
 
-}
+
+
 .contenido{
     grid-area: contenido;
     background-image: url('../img/portada.png') ;
     background-size: cover ;
     background-repeat: no-repeat;
+    width: 100vw;
     
 }
 .tittle-nosotros{
@@ -51,6 +93,7 @@ body{
     display: flex;
     justify-content: center;
     align-content: center;
+    width: 100vw;
 }
 .nosotros{
     grid-area: nosotros;
@@ -60,6 +103,7 @@ body{
     background-color: #23272E;
     padding-top: 50px;
     padding-bottom: 50px;
+    width: 100vw;
     
 }
 .subitem.foto{
@@ -90,27 +134,7 @@ body{
 .footer{
     grid-area: footer;
 }
-nav{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-   
-    height: 100%;
-    background-color: black;
-    margin: 0;
 
-}
-nav a{
-    cursor: pointer;
-    color: white;
-    
-    padding: 15px;
-   
-}
-nav a:hover{
-    background-color: white;
-    color: black;
-    transition: 2s;}
 
     .tittle-gallery{
         grid-area: tittle-gallery;
@@ -121,6 +145,7 @@ nav a:hover{
         justify-content: center;
         font-size: 1.5em;
         flex-direction: column;
+        width: 100vw;
        
      
     
@@ -139,6 +164,7 @@ nav a:hover{
     
 }
 .post-list{
+    width: 100vw;
     grid-area: post-list;
     
     position: relative;
@@ -175,7 +201,7 @@ nav a:hover{
 }
 .o{
     grid-area: o;
-    
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -195,6 +221,7 @@ nav a:hover{
     font-family: 'hestina';
     font-size: 1.5em;
     position: relative;
+    width: 100vw;
 
 }
 .contactanos{
@@ -204,6 +231,7 @@ nav a:hover{
     justify-content: center;
     align-items: center;
     background: #23272E ;
+    width: 100vw;
 }
 .icon-contactanos{
    display: flex;
@@ -219,6 +247,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 color: white;
+width: 100vw;
    
 }
 h3{
@@ -227,6 +256,47 @@ h3{
 }
 
 @media (min-width:320px) and (max-width:400px){
+    .burger{
+        color: white;
+        margin: 10px;
+        height: 30px;
+        float: right;
+        width: 30px;
+        display: block;
+    }
+    .burgerclose{
+        color: white;
+        margin: 10px;
+        height: 20px;
+        float: right;
+        width: 20px;
+        display: none;
+        padding: 5px ;
+    }
+    nav a {
+        font-size: 15px;
+        font-family: 'hestina';
+        padding: 25 0 25 30;
+        width: 90% ;
+        color: white;
+        background: rgba(0 , 0, 0,65%);
+        text-decoration: none;
+        
+        text-align: left;
+    }
+    nav{height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 60%);
+        margin: 0;
+        display: flex;
+        position: relative;
+        top: 90px;
+    }
+
+
 .whitetittle{
         font-size: 20px;
         font-family: 'hestina';
@@ -241,10 +311,10 @@ h3{
 .container{
     
     display: grid;
-    grid-template: 25px 550px 50px 200px 70px 0.15fr 40px 100px 400px 50px/ 1fr 1fr;
+    grid-template:  550px 50px 200px 70px 0.15fr 40px 100px 400px 50px/ 1fr 1fr;
     height: 100vh;
    
-    grid-template-areas: "logo nav"
+    grid-template-areas: 
                          "contenido contenido"
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
@@ -322,6 +392,45 @@ padding: 0 10 0 10
 }
 }
 @media (min-width:400px) and (max-width:500px){
+    .burger{
+        color: white;
+        margin: 10px;
+        height: 30px;
+        float: right;
+        width: 30px;
+        display: block;
+    }
+    .burgerclose{
+        color: white;
+        margin: 10px;
+        height: 20px;
+        float: right;
+        width: 20px;
+        display: none;
+        padding: 5px ;
+    }
+    nav a {
+        font-size: 15px;
+        font-family: 'hestina';
+        padding: 25 0 25 30;
+        width: 93% ;
+        color: white;
+        background: rgba(0 , 0, 0,65%);
+        text-decoration: none;
+       
+        text-align: left;
+    }
+    nav{height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 60%);
+        margin: 0;
+        display: none;
+        position: relative;
+        top: 100px;}
+
     .whitetittle{
         font-size: 20px;
         font-family: 'hestina';
@@ -333,10 +442,10 @@ padding: 0 10 0 10
 .container{
     
     display: grid;
-    grid-template: 25px 550px 50px 300px 100px 325px 50px 100px 500px 50px/ 1fr 1fr;
+    grid-template:  550px 50px 300px 100px 325px 50px 100px 500px 50px/ 1fr 1fr;
     height: 100vh;
    
-    grid-template-areas: "logo nav"
+    grid-template-areas: 
                          "contenido contenido"
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
@@ -388,8 +497,8 @@ padding: 0 10 0 10
     width: 15px;
 }
 .overlay{
-    width: 150px;
-    height: 99.813px;
+    width: 125px;
+    height: 83.175px;
 }
 .post-list{
     grid-template: repeat(3,83.175px )/ repeat(3,125px );
@@ -412,7 +521,47 @@ padding: 0 10 0 10
     font-size: 15px;
 }
 }
+
 @media (min-width:500px) and (max-width:650px){
+    .burger{
+        color: white;
+        margin: 10px;
+        height: 30px;
+        float: right;
+        width: 30px;
+        display: block;
+    }
+    .burgerclose{
+        color: white;
+        margin: 10px;
+        height: 20px;
+        float: right;
+        width: 20px;
+        display: none;
+        padding: 5px ;
+    }
+    nav a {
+        font-size: 15px;
+        font-family: 'hestina';
+        padding: 25 25 25 30;
+        width: 95% ;
+        color: white;
+        background: rgba(0 , 0, 0,65%);
+        text-decoration: none;
+      
+        text-align: left;
+    }
+    nav{height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 60%);
+        margin: 0;
+        display: none;
+        position: relative;
+        top: 100px;}
+        
     .whitetittle{
         font-size: 30px;
         font-family: 'hestina';
@@ -424,10 +573,10 @@ padding: 0 10 0 10
 .container{
     
     display: grid;
-    grid-template: 25px 550px 80px 400px 100px 400px 50px 125px 500px 50px/ 1fr 1fr;
+    grid-template:  550px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
     height: 100vh;
    
-    grid-template-areas: "logo nav"
+    grid-template-areas: 
                          "contenido contenido"
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
@@ -494,6 +643,136 @@ margin: 20px 0px 20px 0px;
 }
 .icon-contactanos img{
     width: 15px;
+}
+.mapawidth{
+    width: 450px;
+    height: 450px;
+}
+.footer h3{
+    font-size: 15px;
+}
+}
+@media (min-width:650px) and (max-width:850px){
+    .burger{
+        color: white;
+        margin: 10px;
+        height: 30px;
+        float: right;
+        width: 30px;
+        display: block;
+    }
+    .burgerclose{
+        color: white;
+        margin: 10px;
+        height: 20px;
+        float: right;
+        width: 20px;
+        display: none;
+        padding: 5px ;
+    }
+    nav a {
+        font-size: 15px;
+        font-family: 'hestina';
+        padding: 25 25 25 30;
+        width: 95% ;
+        color: white;
+        background: rgba(0 , 0, 0,65%);
+        text-decoration: none;
+      
+        text-align: left;
+    }
+    nav{height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 60%);
+        margin: 0;
+        display: none;
+        position: relative;
+        top: 100px;}
+        
+    .whitetittle{
+        font-size: 30px;
+        font-family: 'hestina';
+    }
+.blacktittle{
+    font-size: 30px;
+}
+
+.container{
+    
+    display: grid;
+    grid-template:  550px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
+    height: 100vh;
+   
+    grid-template-areas: 
+                         "contenido contenido"
+                          "tittle-nosotros tittle-nosotros"
+                         "nosotros nosotros"
+                         "tittle-gallery tittle-gallery"
+                         "post-list post-list"
+                         "o o"
+                         "tittle-contactanos tittle-contactanos"
+                         "contactanos contactanos"
+                         "footer footer"
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 15px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,150px) /repeat(4,150px);
+    justify-content: center;
+    align-content: center;
+}
+.tittle-gallery{
+width: 100vw;
+margin: 20px 0px 20px 0px;
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 15px;
+}
+.overlay{
+    width: 200px;
+    height: 133.087px;
+}
+.post-list{
+    grid-template: repeat(3,133.087px )/ repeat(3,200px );
+    width: 100vw;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.post-image img {
+    width: 200px; 
+}
+.icon-contactanos img{
+    width: 20px;
 }
 .mapawidth{
     width: 450px;

@@ -7,22 +7,37 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Document</title>
 </head>
-
+<script>
+        
+    function myfuction(){
+        document.getElementById("menu").style.display="flex"
+        document.getElementById("boton").style.display="none"
+        document.getElementById("closemenu").style.display="block"
+     }
+     function cerrar(){
+         document.getElementById("menu").style.display="none"
+         document.getElementById("boton").style.display="block"
+         document.getElementById("closemenu").style.display="none"
+     }
+ </script>
 <body>
-   
+   <header>
+       
+            <img  class="header-logo" src="./img/LOGO.svg" alt="">
+
+            <a onclick="myfuction()" id="boton" class="burger">
+                <img class="burger" src="./img/menubar.svg" alt=""></a>
+            <a onclick="cerrar()" id="closemenu" class="burgerclose">
+                <img id="closemenu" class="cerrarburger" src="./img/menubarclose.svg" alt=""></a>
+
+        <nav  id="menu">
+            <a href="" class="link">Nosotros</a>
+            <a href="" class="link">Siguenos</a>
+            <a href="" class="link">Visitanos</a>
+        </nav>
+   </header>
        <section class="container">
-            <div class="item logo">
-                <figure class="logo-header">
-                <img src="./img/LOGO.svg" alt="">
-                </figure>
-                
-            </div>
-            <div class="item nav">
-                <nav>
-                    <a href="">Acerca de nosotros</a>
-                    <a href="">Trabajos</a>
-                    <a href="">Visitanos</a>
-                </nav>
+           
             </div>
             <div class="item contenido"></div>
         </header>
