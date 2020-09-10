@@ -201,7 +201,7 @@ nav{
     }
 .post{
     position: relative;
-  
+    overflow: hidden;
     display: FLEX;
     
 }
@@ -544,8 +544,7 @@ padding: 0 10 0 10
     display: none; grid-area: nav;
 }
 .logo-header img{
-  
-   height: 25px;
+    height: 25px;
 }
 .medidas img{
     padding: 10px;

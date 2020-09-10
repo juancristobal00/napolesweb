@@ -1,73 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <title>Document</title>
-</head>
-<script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    function myfuction(){
-        document.getElementById("menu").style.display="flex"
-        document.getElementById("boton").style.display="none"
-        document.getElementById("closemenu").style.display="block"
-     }
-     function cerrar(){
-         document.getElementById("menu").style.display="none"
-         document.getElementById("boton").style.display="block"
-         document.getElementById("closemenu").style.display="none"
-     }
- </script>
-<body>
-   <header>
-       
+        <title>Napoles Barber Shop</title>
+
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+
+    <body>
+        <header>
             <img  class="header-logo" src="./img/LOGO.svg" alt="">
 
-            <a onclick="myfuction()" id="boton" class="burger">
+            <a onclick="openMenu()" id="boton" class="burger">
                 <img class="burger" src="./img/menubar.svg" alt=""></a>
-            <a onclick="cerrar()" id="closemenu" class="burgerclose">
-                <img id="closemenu" class="cerrarburger" src="./img/menubarclose.svg" alt=""></a>
+            <a onclick="closeMenu()" id="closemenu" class="burgerclose">
+                <img id="closemenu" class="cerrarburger" src="./img/menubarclose.svg" alt="">
+            </a>
 
-        <nav  id="menu">
-            <a href="" class="link">Nosotros</a>
-            <a href="" class="link">Siguenos</a>
-            <a href="" class="link">Visitanos</a>
-        </nav>
-   </header>
-       <section class="container">
-           
-            </div>
+            <nav  id="menu">
+                <a href="" class="link">Nosotros</a>
+                <a href="" class="link">Siguenos</a>
+                <a href="" class="link">Visitanos</a>
+            </nav>
+        </header>
+
+        <section class="container">
             <div class="item contenido"></div>
-            <div class="tittle-cuarentena"><h1>Cuidemosnos entre todos</h1></div>
+
+            <div class="tittle-cuarentena">
+                <h1>Cuidemosnos entre todos</h1>
+            </div>
+
             <div class="medidas-cuarentena">
                 <div class="medidas">
                     <img src="./img/mascarilla.svg" alt="">
                     <h3 class="tittlemedida">Mascarilla obligatoria</h3>
-                    <p style="text-align: center;">El uso de mascarilla es obligatorio
-                        tanto para nuestro personal 
-                        para el cliente</p>
+                    <p style="text-align: center;">El uso de mascarilla es obligatorio tanto para nuestro personal para el cliente</p>
                 </div>
+
                 <div class="medidas">
                     <img src="./img/C.svg" alt="">
                     <h3 class="tittlemedida">Control de acceso</h3>
-                    <p style="text-align: center;">Todas las personas que acceden al local
-                        se les controla la temperatura y se les 
-                        proporciona alcohol gel</p>
+                    <p style="text-align: center;">Todas las personas que acceden al local se les controla la temperatura y se les proporciona alcohol gel</p>
                 </div>
+
                 <div class="medidas">
                     <img src="./img/navaja.svg" alt="">
                     <h3 class="tittlemedida">Limpieza de insumos</h3>
-                    <p style="text-align: center;">Todos nuestros utiles de trabajos son desinfectados
-                        despues de atender a un cliente y nuestros
-                        asientos igual</p>
+                    <p style="text-align: center;">Todos nuestros utiles de trabajos son desinfectados despues de atender a un cliente y nuestros asientos igual</p>
                 </div>
-
             </div>
+
             <div class="item tittle-nosotros">
                 <h1 class="tittle">Nosotros</h1>
             </div>
+
             <div class="item nosotros">
                 <div class="subitem texto">
                     <h2>Nosotros</h2>
@@ -75,132 +65,33 @@
                 </div>
                 <div class="subitem foto"></div>
             </div>
+
             <div class="item tittle-gallery"> 
                 <h1 class="blacktittle">Siguenos</h1>
                 <img src="./img/logosiguenos.svg" width="30px" alt="">
             </div>
-            <section class="post-list">
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-                <a href="" class="post">
-                    <figure class="post-image">
-                        <img src="./img/du (4).jfif" alt="">
-                    </figure>
-                    <span class="overlay">
-                        <p>
-                            <span class="comments">150</span>
-                            <span class="likes">200</span>
-                        </p>
-                    </span>
-                </a>
-            </section>
-           <div class="o"><h1>o</h1></div>
-           <div class="tittle-contactanos">
-               <h1 class="whitetittle">Contactanos</h1>
-               <div class="icon-contactanos">
-                   <img src="./img/Icono Facebook.svg" alt="">
-                   <img src="./img/Icono Instagram.svg" alt="" >
-                   <img src="./img/Icono Whatsapp.svg" alt="" >
-               </div>
-           </div>
-           <section class="contactanos">
-            <iframe class="mapawidth" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d777.7096689707527!2d-72.605738!3d-38.767404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d1483c7980bb%3A0xada9a3955068753e!2sCollague%20398%2C%20Padre%20las%20Casas%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1597343945562!5m2!1ses!2scl" width="850" height="850" frameborder="0" style="border:0;" allowfullscreen="yes" aria-hidden="false" tabindex="0"></iframe>
-           </section>
-           <div class="item footer">
-               <h3>Darvin Andres Villalobos</h3>
-               <h3>darvin.andres.v@gmail.com</h3>
-           </div>
-            
-            
-        </section>
-   
 
-  
-</body>
+            <section class="post-list" id="post-list"></section>
+
+            <div class="o"><h1>o</h1></div>
+            <div class="tittle-contactanos">
+                <h1 class="whitetittle">Contactanos</h1>
+                <div class="icon-contactanos">
+                    <img src="./img/Icono Facebook.svg" alt="">
+                    <img src="./img/Icono Instagram.svg" alt="" >
+                    <img src="./img/Icono Whatsapp.svg" alt="" >
+                </div>
+            </div>
+
+            <section class="contactanos">
+                <iframe class="mapawidth" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d777.7096689707527!2d-72.605738!3d-38.767404!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d1483c7980bb%3A0xada9a3955068753e!2sCollague%20398%2C%20Padre%20las%20Casas%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1597343945562!5m2!1ses!2scl" width="850" height="850" frameborder="0" style="border:0;" allowfullscreen="yes" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+
+            <div class="item footer">
+                <h3>Darvin Andres Villalobos</h3>
+                <h3>darvin.andres.v@gmail.com</h3>
+            </div>
+        </section> 
+        </script>
+    </body>
 </html>
