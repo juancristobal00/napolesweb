@@ -37,6 +37,7 @@ h1{
     cursor: pointer;
 }
 header{
+    width: 100vw;
     height: 60px;
     background-color: black;
     position: relative;
@@ -62,7 +63,7 @@ nav{
 }
 .container{
     display: grid;
-    grid-template:  700px 90px 300px 80px 0.15fr 135px 600px 50px 135px 1050px 50px/ 1fr 1fr;
+    grid-template:  700px 90px 300px 80px 0.15fr 135px 660px 50px 135px 1050px 50px/100vw ;
     height: 100vh;
    
     grid-template-areas: 
@@ -211,18 +212,18 @@ nav{
     
     position: relative;
     display: grid;
-    grid-template: repeat(3,166.360px )/ repeat(3,250px );
+    grid-template: repeat(3,200px )/ repeat(3,200px );
     gap: 10px;
     justify-content: center;
     align-content: center;
 }
 .post-image{
     margin: 0;
-    width: 250px;
+    width: 200px;
 }
 .post-image img{
-    width: 250px;
-    width: 250px;
+    width: 200px;
+    width: 200px;
 }
 .overlay{
     position: absolute;
@@ -232,7 +233,7 @@ nav{
     bottom: 0;
     background: rgba(0, 0, 0, 60%);
     width: 250px;
-    height: 166.360px;
+    height: 250px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -361,7 +362,7 @@ h3{
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 50px 200px 70px 0.15fr 40px 100px 400px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 50px 200px 70px 360px 40px 100px 400px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -435,11 +436,12 @@ padding: 0 10 0 10
     width: 15px;
 }
 .post-list{
-    grid-template: repeat(3,66.537px )/ repeat(3,100px );
+    grid-template: repeat(3,100px )/ repeat(3,100px );
     width: 100vw;
-    gap: 1px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
     
 }
 .contactanos{
@@ -447,7 +449,8 @@ padding: 0 10 0 10
     
 }
 .post-image img {
-    width: 100px; 
+    width: 100px;
+    height: 100px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -517,7 +520,7 @@ padding: 0 10 0 10
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 50px 300px 100px 325px 50px 100px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 50px 300px 100px 380px 50px 100px 500px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -586,17 +589,18 @@ padding: 0 10 0 10
 }
 .overlay{
     width: 125px;
-    height: 83.175px;
+    height: 125px;
 }
 .post-list{
-    grid-template: repeat(3,83.175px )/ repeat(3,125px );
+    grid-template: repeat(3,125px )/ repeat(3,125px );
     width: 100vw;
-    gap: 5px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .post-image img {
-    width: 125px; 
+    width: 125px;
+    height: 125px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -667,7 +671,7 @@ padding: 0 10 0 10
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr;
     height: 100vh;
    
     grid-template-areas: 
@@ -736,17 +740,18 @@ margin: 20px 0px 20px 0px;
 }
 .overlay{
     width: 150px;
-    height: 99.813px;
+    height: 150px;
 }
 .post-list{
-    grid-template: repeat(3,99.813px )/ repeat(3,150px );
+    grid-template: repeat(3,150px )/ repeat(3,150px );
     width: 100vw;
-    gap: 5px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .post-image img {
     width: 150px; 
+    height: 150px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -816,7 +821,7 @@ margin: 20px 0px 20px 0px;
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 80px 400px 100px 600px 50px 125px 500px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -886,10 +891,10 @@ margin: 20px 0px 20px 0px;
 }
 .overlay{
     width: 200px;
-    height: 133.087px;
+    height: 200px;
 }
 .post-list{
-    grid-template: repeat(3,133.087px )/ repeat(3,200px );
+    grid-template: repeat(3,200px )/ repeat(3,200px );
     width: 100vw;
     gap: 5px;
     padding-top: 20px;
@@ -897,6 +902,7 @@ margin: 20px 0px 20px 0px;
 }
 .post-image img {
     width: 200px; 
+    height: 200px;
 }
 .icon-contactanos img{
     width: 20px;
