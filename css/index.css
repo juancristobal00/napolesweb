@@ -2,12 +2,17 @@ body{
     margin: 0;
     
 }
-h1{
-    font-size: 40px;
-    font-family: 'noto sans jp';
+
+.blacktittle{
+    font-size: 35px;
+    font-family: 'moodern';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.o h1{
-    font-size: 40px;
+.whitetittle{
+    font-size: 35px;
+    font-family: 'moodern';
 }
 .burger{
     color: white;
@@ -22,36 +27,47 @@ h1{
     margin: 10;
     height: 20px;
     float: right;
-    width: 20px;
+    width: 100px;
     display: none;
     padding: 5 ;}
 .link{
     color: white;
-    padding: 20px;
+    padding-top:23.4px;
+    padding-bottom: 23.4px;
+    padding-right: 23px;
+    padding-left: 23px;
+    
     text-decoration: none;
-    font-family: 'noto sans jp';
+    font-family: 'moodern';
+    
 }
 .link:hover{
     background: white;
     color: black;
     cursor: pointer;
+    text-decoration: underline;
+    transition: 2s;
 }
 header{
-    height: 60px;
+    width: 100%;
+    height: 70px;
     background-color: black;
-    position: relative;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 nav{
     color: white;
-    float: right;
     margin: 1px;
-    height: 50px;
-    width: 270px;
-    margin: 15;
+    height: 70px;
+    width: 350px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding-right: 20px;
+    
+    
 }
 
 
@@ -59,10 +75,11 @@ nav{
 .header-logo {
     width: 200px;
     height: 50px;
+   
 }
 .container{
     display: grid;
-    grid-template:  700px 90px 300px 80px 0.15fr 135px 600px 50px 135px 1050px 50px/ 1fr 1fr;
+    grid-template:  700px 90px 300px 80px 800px 135px 1px 700px 1px 60px 135px 1050px 50px/100vw ;
     height: 100vh;
    
     grid-template-areas: 
@@ -72,7 +89,9 @@ nav{
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
                          "tittle-gallery tittle-gallery"
+                         "hr hr"
                          "post-list post-list"
+                         "hr2 hr2"
                          "o o"
                          "tittle-contactanos tittle-contactanos"
                          "contactanos contactanos"
@@ -88,12 +107,12 @@ nav{
 .tittle-cuarentena{
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     font-family: Noto sans jp;
     font-weight: bold;
     font-size: 22px;
     width: 100vw;
-    background: #23272E;
+    background: black;
     color: white;
     text-shadow: 2px 5px 5px black;
 }
@@ -104,7 +123,7 @@ nav{
     justify-content: space-around;
 }
 .tittlemedida{
-    font-family:'noto sans jp' ;
+    font-family:'moodern' ;
  
 }
 .medidas{
@@ -113,7 +132,7 @@ nav{
     align-items: center;
     width: 250px;
     flex-direction: column;
-    font-family:'noto sans jp'
+    font-family:'moodern'
 }
 .medidas img{
  width: 50px;
@@ -128,24 +147,20 @@ nav{
 }
 .tittle-nosotros{
     grid-area: tittle-nosotros;
-    background: #23272E;
+    background: black;
     color: white;
-   
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     width: 100vw;
     text-shadow: 2px 5px 5px black;
 }
 .nosotros{
     grid-area: nosotros;
     display: grid;
-    grid-template: repeat(2,200px) /repeat(4,200px);
-    justify-content: center;
-    background-color: #23272E;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 100vw;
+    grid-template: repeat(2,50%) /repeat(4,25%);
+   background: black;
+    width: auto;
     
 }
 .subitem.foto{
@@ -153,11 +168,12 @@ nav{
     background-size: cover;
     grid-column: 3/5;
     grid-row: 1/3;
+    
    
     
 }
 .subitem.texto{
-    background: white;
+    background: #e4e3e3;
     grid-column: 1/3;
     grid-row: 1/3;
    
@@ -166,13 +182,20 @@ nav{
 }
 .subitem.texto h2{
     color:black;
+    text-align: center;
+    font-family: 'manhandle slab';
+    font-size: 30px;
     
-    margin: 0;
 }
 .subitem.texto p{
-    text-align: start;
-    font-family: arial;
+    text-align: center;
+    font-family: 'moodern';
+    font-weight: lighter;
 }
+.subitem.texto:hover h2 {
+    color: #EABE3F	;
+}
+
 .footer{
     grid-area: footer;
 }
@@ -181,7 +204,6 @@ nav{
     .tittle-gallery{
         grid-area: tittle-gallery;
         text-align: center;
-        font-family: 'noto sans jp';
         display: flex;
         align-items: center;
         justify-content: center;
@@ -205,24 +227,51 @@ nav{
     display: FLEX;
     
 }
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
+
 .post-list{
     width: 100vw;
     grid-area: post-list;
     
     position: relative;
     display: grid;
-    grid-template: repeat(3,166.360px )/ repeat(3,250px );
+    grid-template: repeat(3,200px )/ repeat(3,200px );
     gap: 10px;
     justify-content: center;
     align-content: center;
 }
 .post-image{
     margin: 0;
-    width: 250px;
+    width: 200px;
 }
 .post-image img{
-    width: 250px;
-    width: 250px;
+    width: 200px;
+    width: 200px;
 }
 .overlay{
     position: absolute;
@@ -231,8 +280,8 @@ nav{
     left: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 60%);
-    width: 250px;
-    height: 166.360px;
+    width: 200px;
+    height: 200px;
     display: none;
     justify-content: center;
     align-items: center;
@@ -246,21 +295,15 @@ nav{
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
    
 }
-.o h1{
-    font-family: 'noto sans jp';
-    font-size: 40px;
-    margin: 0;
-  
-}
+
 .tittle-contactanos{
     color: white;
-    background: #23272E;
+    background: black;
     font-size: 22px;
     text-align: center;
-    font-family: 'noto sans jp';
     text-shadow: 2px 5px 5px black;
     position: relative;
     width: 100vw;
@@ -273,7 +316,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #23272E ;
+    background: black ;
     width: 100vw;
 }
 .icon-contactanos{
@@ -284,7 +327,7 @@ nav{
     width: 30px;
 }
 .footer{
-background-color: #14171C;
+background-color: #333333;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -299,33 +342,36 @@ h3{
 }
 
 @media (min-width:320px) and (max-width:400px){
-    h1{
-        font-size: 20px;
-    }
-    .o h1{
-        font-size: 20px;
-    }
+  
     .burger{
         color: white;
-        margin: 10px;
-        height: 30px;
-        float: right;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
         display: block;
+        padding-right: 5px;
     }
     .burgerclose{
         color: white;
         margin: 10px;
         height: 20px;
-        float: right;
         width: 20px;
         display: none;
-        padding: 5px ;
+        padding-bottom: 5px ;
+        padding-right: 10px;
     }
-    nav a {
+    .burgerclose img{
+        height: 25px;
+    }
+    header{
+        width: 100vw;
+        position: relsative;
+    }
+    .link{
         font-size: 15px;
-        font-family: 'hestina';
-        padding: 25 0 25 30;
+        font-family: 'noto sans jp';
+        padding: 25px 0px;
         width: 100vw;
         color: white;
         background: rgba(0 , 0, 0,65%);
@@ -340,28 +386,30 @@ h3{
         width: 100vw;
         background-color: rgb(0, 0, 0, 60%);
         margin: 0;
-        display: flex;
-        position: relative;
-        top: 90px;
+        display: none;
+        grid-area: nav;
+        position: absolute;
+        top: 70px;
+      
     }
 
 
 .whitetittle{
         font-size: 20px;
-        font-family: 'noto sans jp';
+        font-family: 'moodern';
     }
 .blacktittle{
     font-size: 20px;
-    font-family: 'noto sans jp';
+    font-family: 'moodern';
 }
 .overlay{
     width: 100px;
-    height: 66.537px;
+    height: 100px;
 }
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 50px 200px 70px 0.15fr 40px 100px 400px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 50px 175.200px 70px 1px 360px 0.5px 40px 100px 400px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -371,25 +419,47 @@ h3{
      "tittle-nosotros tittle-nosotros"
     "nosotros nosotros"
     "tittle-gallery tittle-gallery"
+    "hr hr"
     "post-list post-list"
+    "hr2 hr2"
     "o o"
     "tittle-contactanos tittle-contactanos"
     "contactanos contactanos"
     "footer footer";
 }
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
 
 .logo-header{
     width: 50vw;
-    height: 25px;
+    height: 30px;
     grid-area: logo;
 }
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-  
-   height: 25px;
-}
+
 .tittle-cuarentena{
     font-size: 25px;
 }
@@ -422,9 +492,8 @@ h3{
 .nosotros{
     padding: 0px;
     width: 100vw;
-    grid-template: repeat(2,80px) /repeat(4,80px);
-    justify-content: center;
-    align-content: center;
+    grid-template: repeat(2,50%) /repeat(4,25%);
+    
 }
 .tittle-gallery{
 width: 100vw;
@@ -435,11 +504,12 @@ padding: 0 10 0 10
     width: 15px;
 }
 .post-list{
-    grid-template: repeat(3,66.537px )/ repeat(3,100px );
+    grid-template: repeat(3,100px )/ repeat(3,100px );
     width: 100vw;
-    gap: 1px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
     
 }
 .contactanos{
@@ -447,7 +517,8 @@ padding: 0 10 0 10
     
 }
 .post-image img {
-    width: 100px; 
+    width: 100px;
+    height: 100px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -461,39 +532,41 @@ padding: 0 10 0 10
 }
 }
 @media (min-width:400px) and (max-width:500px){
-    h1{
-        font-size: 25px;
-    }
-    .o h1{
-        font-size: 25px;
-    }
+   
     .burger{
         color: white;
-        margin: 10px;
-        height: 30px;
-        float: right;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
         display: block;
+        padding-right: 10px;
     }
     .burgerclose{
         color: white;
         margin: 10px;
         height: 20px;
-        float: right;
         width: 20px;
         display: none;
-        padding: 5px ;
+        padding-bottom: 5px ;
+        padding-right: 20px;
     }
-    nav a {
+    .burgerclose img{
+        height: 25px;
+    }
+    header{
+        width: 100vw;
+        position: fixed;
+    }
+    .link {
         font-size: 15px;
         font-family: 'noto sans jp';
-        padding: 25 0 25 30;
-        width: 100vw ;
+        width: 100%;
         color: white;
         background: rgba(0 , 0, 0,65%);
         text-decoration: none;
-       
         text-align: center;
+        padding: 20px 0px;
     }
     nav{height: 150px;
         flex-direction: column;
@@ -503,21 +576,25 @@ padding: 0 10 0 10
         background-color: rgb(0, 0, 0, 60%);
         margin: 0;
         display: none;
-        position: relative;
-        top: 100px;}
+        grid-area: nav;
+        position: absolute;
+        top: 70px;
+      
+    }
 
     .whitetittle{
         font-size: 20px;
-        font-family: 'noto sans jp';
+        font-family: 'moodern';
     }
 .blacktittle{
     font-size: 20px;
+    font-family: 'moodern';
 }
 
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 50px 300px 100px 325px 50px 100px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 50px 200px 100px 1px 420px 0.5px 50px 100px 500px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -528,13 +605,40 @@ padding: 0 10 0 10
      "tittle-nosotros tittle-nosotros"
     "nosotros nosotros"
     "tittle-gallery tittle-gallery"
+    "hr hr"
     "post-list post-list"
+    "hr2 hr2"
     "o o"
     "tittle-contactanos tittle-contactanos"
     "contactanos contactanos"
     "footer footer";
 }
-
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
 .logo-header{
     width: 50vw;
     height: 25px;
@@ -561,7 +665,7 @@ padding: 0 10 0 10
     width: 100vw;
 }
 .subitem.texto h2{
-    font-size: 15px;
+    font-size: 17.5px;
 }
 .subitem.texto p{
     font-size: 10px;
@@ -572,7 +676,7 @@ padding: 0 10 0 10
 .nosotros{
     padding: 0px;
     width: 100vw;
-    grid-template: repeat(2,95px) /repeat(4,95px);
+    grid-template: repeat(2,50%) /repeat(4,25%);
     justify-content: center;
     align-content: center;
 }
@@ -583,20 +687,22 @@ padding: 0 10 0 10
 .tittle-gallery img{
     padding: 10px;
     width: 15px;
+    height: 20px;
 }
 .overlay{
-    width: 125px;
-    height: 83.175px;
+    width: 115px;
+    height: 115px;
 }
 .post-list{
-    grid-template: repeat(3,83.175px )/ repeat(3,125px );
+    grid-template: repeat(3,115px )/ repeat(3,115px );
     width: 100vw;
-    gap: 5px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .post-image img {
-    width: 125px; 
+    width: 115px;
+    height: 115px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -610,40 +716,43 @@ padding: 0 10 0 10
 }
 }
 
-@media (min-width:500px) and (max-width:650px){
-    h1{
-        font-size: 30px;
-    }
-    .o h1{
-        font-size: 30px;
-    }
+@media (min-width:500px) and (max-width:600px){
+  
     .burger{
         color: white;
-        margin: 10px;
-        height: 30px;
-        float: right;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
         display: block;
+        padding-right: 10px;
     }
     .burgerclose{
         color: white;
         margin: 10px;
         height: 20px;
-        float: right;
         width: 20px;
         display: none;
-        padding: 5px ;
+        padding-bottom: 5px ;
+        padding-right: 15px;
     }
-    nav a {
+    .burgerclose img{
+        height: 25px;
+    }
+    header{
+        width: 100vw;
+        position: fixed;
+    }
+    .link {
         font-size: 15px;
-        font-family: 'noto sans jp';
-        padding: 25 25 25 30;
-        width: 100vw ;
+        font-family: 'moodern';
+        font-weight: lighter;
+        width: 100%;
         color: white;
         background: rgba(0 , 0, 0,65%);
         text-decoration: none;
-      
         text-align: center;
+        padding: 20px 0px;
     }
     nav{height: 150px;
         flex-direction: column;
@@ -653,21 +762,25 @@ padding: 0 10 0 10
         background-color: rgb(0, 0, 0, 60%);
         margin: 0;
         display: none;
-        position: relative;
-        top: 100px;}
+        grid-area: nav;
+        position: absolute;
+        top: 70px;
+      
+    }
+
         
     .whitetittle{
-        font-size: 30px;
-        font-family: 'noto sans jp';
+        font-size: 20px;
+        font-family: 'moodern';
     }
 .blacktittle{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 80px 250px 100px 1px 500px 1px 50px 115px 500px 50px/ 1fr;
     height: 100vh;
    
     grid-template-areas: 
@@ -678,7 +791,9 @@ padding: 0 10 0 10
      "tittle-nosotros tittle-nosotros"
     "nosotros nosotros"
     "tittle-gallery tittle-gallery"
+    "hr hr"
     "post-list post-list"
+    "hr2 hr2"
     "o o"
     "tittle-contactanos tittle-contactanos"
     "contactanos contactanos"
@@ -711,7 +826,7 @@ padding: 0 10 0 10
     width: 100vw;
 }
 .subitem.texto h2{
-    font-size: 15px;
+    font-size: 20px;
 }
 .subitem.texto p{
     font-size: 10px;
@@ -719,12 +834,42 @@ padding: 0 10 0 10
 .subitem.texto{
     padding:10px;
 }
+.subitem.foto img{
+    width: 100%;
+    height: 100%;
+}
 .nosotros{
     padding: 0px;
     width: 100vw;
-    grid-template: repeat(2,110px) /repeat(4,110px);
+    grid-template: repeat(2,50%) /repeat(4,25%);
     justify-content: center;
     align-content: center;
+}
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
 }
 .tittle-gallery{
 width: 100vw;
@@ -733,20 +878,22 @@ margin: 20px 0px 20px 0px;
 .tittle-gallery img{
     padding: 10px;
     width: 15px;
+    height: 20px;
 }
 .overlay{
-    width: 150px;
-    height: 99.813px;
+    width: 130px;
+    height: 130px;
 }
 .post-list{
-    grid-template: repeat(3,99.813px )/ repeat(3,150px );
+    grid-template: repeat(3,130px )/ repeat(3,130px );
     width: 100vw;
-    gap: 5px;
+    gap: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .post-image img {
-    width: 150px; 
+    width: 130px; 
+    height: 130px;
 }
 .icon-contactanos img{
     width: 15px;
@@ -759,40 +906,43 @@ margin: 20px 0px 20px 0px;
     font-size: 15px;
 }
 }
-@media (min-width:650px) and (max-width:850px){
-    h1{
-        font-size: 35px;
-    }
-    .o h1{
-        font-size: 35px;
-    }
+@media (min-width:600px) and (max-width:700px){
+   
     .burger{
         color: white;
-        margin: 10px;
-        height: 30px;
-        float: right;
-        width: 30px;
+        height: 40px;
+        width: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
         display: block;
+        padding-right: 10px;
     }
     .burgerclose{
         color: white;
         margin: 10px;
         height: 20px;
-        float: right;
         width: 20px;
         display: none;
-        padding: 5px ;
+        padding-bottom: 5px ;
+        padding-right: 15px;
     }
-    nav a {
+    .burgerclose img{
+        height: 25px;
+    }
+    header{
+        width: 100vw;
+        position: fixed;
+    }
+    .link {
         font-size: 15px;
-        font-family: 'noto sans jp';
-        padding: 25 25 25 30;
-        width: 100vw ;
+        font-family: 'moodern';
+        font-weight: lighter;
+        width: 100%;
         color: white;
         background: rgba(0 , 0, 0,65%);
         text-decoration: none;
-      
         text-align: center;
+        padding: 20px 0px;
     }
     nav{height: 150px;
         flex-direction: column;
@@ -802,21 +952,25 @@ margin: 20px 0px 20px 0px;
         background-color: rgb(0, 0, 0, 60%);
         margin: 0;
         display: none;
-        position: relative;
-        top: 100px;}
+        grid-area: nav;
+        position: absolute;
+        top: 70px;
+      
+    }
         
     .whitetittle{
-        font-size: 30px;
-        font-family: 'noto sans jp';
+        font-size: 25px;
+        font-family: 'moodern';
     }
 .blacktittle{
-    font-size: 30px;
+    font-size: 25px;
+    font-family: 'moodern';
 }
 
 .container{
     
     display: grid;
-    grid-template:  550px  90px 200px 80px 400px 100px 500px 50px 125px 500px 50px/ 1fr 1fr;
+    grid-template:  550px  90px 200px 80px 300px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
     height: 100vh;
    
     grid-template-areas: 
@@ -827,7 +981,9 @@ margin: 20px 0px 20px 0px;
      "tittle-nosotros tittle-nosotros"
     "nosotros nosotros"
     "tittle-gallery tittle-gallery"
+    "hr hr"
     "post-list post-list"
+    "hr2 hr2"
     "o o"
     "tittle-contactanos tittle-contactanos"
     "contactanos contactanos"
@@ -850,7 +1006,7 @@ margin: 20px 0px 20px 0px;
     width: 100vw;
 }
 .subitem.texto h2{
-    font-size: 15px;
+    font-size: 20px;
 }
 .subitem.texto p{
     font-size: 10px;
@@ -872,10 +1028,37 @@ margin: 20px 0px 20px 0px;
 .nosotros{
     padding: 0px;
     width: 100vw;
-    grid-template: repeat(2,150px) /repeat(4,150px);
+    grid-template: repeat(2,50%) /repeat(4,25%);
     justify-content: center;
     align-content: center;
 }
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
+
 .tittle-gallery{
 width: 100vw;
 margin: 20px 0px 20px 0px;
@@ -883,20 +1066,22 @@ margin: 20px 0px 20px 0px;
 .tittle-gallery img{
     padding: 10px;
     width: 15px;
+    height: 25px;
 }
 .overlay{
-    width: 200px;
-    height: 133.087px;
+    width: 150px;
+    height: 150px;
 }
 .post-list{
-    grid-template: repeat(3,133.087px )/ repeat(3,200px );
+    grid-template: repeat(3,150px )/ repeat(3,150px );
     width: 100vw;
     gap: 5px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 .post-image img {
-    width: 200px; 
+    width: 150px; 
+    height: 150px;
 }
 .icon-contactanos img{
     width: 20px;
@@ -909,3 +1094,752 @@ margin: 20px 0px 20px 0px;
     font-size: 15px;
 }
 }
+@media (min-width:700px) and (max-width:800px){
+    .burger{
+        color: white;
+        height: 40px;
+        width: 40px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        display: block;
+        padding-right: 10px;
+    }
+    .burgerclose{
+        color: white;
+        margin: 10px;
+        height: 20px;
+        width: 20px;
+        display: none;
+        padding-bottom: 5px ;
+        padding-right: 15px;
+    }
+    .burgerclose img{
+        height: 25px;
+    }
+    header{
+        width: 100vw;
+        position: fixed;
+    }
+    .link {
+        font-size: 15px;
+        font-family: 'moodern';
+        font-weight: lighter;
+        width: 100%;
+        color: white;
+        background: rgba(0 , 0, 0,65%);
+        text-decoration: none;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    nav{height: 150px;
+        flex-direction: column;
+        align-items: center;
+        height: 0px;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 60%);
+        margin: 0;
+        display: none;
+        grid-area: nav;
+        position: absolute;
+        top: 70px;
+      
+    }
+    .whitetittle{
+        font-size: 25px;
+        font-family: 'moodern';
+        
+    }
+.blacktittle{
+    font-size: 25px;
+    font-family: 'moodern';
+
+}
+
+.container{
+    
+    display: grid;
+    grid-template:  550px  90px 200px 80px 350px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
+    height: 100vh;
+   
+    grid-template-areas: 
+    
+    "contenido contenido"
+    "tittlecuarentena tittlecuarentena"
+    "medidascuarentena medidascuarentena"
+     "tittle-nosotros tittle-nosotros"
+    "nosotros nosotros"
+    "tittle-gallery tittle-gallery"
+    "hr hr"
+    "post-list post-list"
+    "hr2 hr2"
+    "o o"
+    "tittle-contactanos tittle-contactanos"
+    "contactanos contactanos"
+    "footer footer";
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 25px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.medidas img{
+    padding: 10px;
+    width: 30px;
+}
+.tittlemedida{
+ font-size: 15px;
+}
+.medidas p{
+ font-size: 10px;
+ width: 33vw;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,50%) /repeat(4,25%);
+    justify-content: center;
+    align-content: center;
+}
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
+
+.tittle-gallery{
+width: 100vw;
+margin: 20px 0px 20px 0px;
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 20px;
+    height: 30px;
+}
+.overlay{
+    width: 150px;
+    height: 150px;
+}
+.post-list{
+    grid-template: repeat(3,150px )/ repeat(3,150px );
+    width: 100vw;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.post-image img {
+    width: 150px; 
+    height: 150px;
+}
+.icon-contactanos img{
+    width: 20px;
+}
+.mapawidth{
+    width: 450px;
+    height: 450px;
+}
+.footer h3{
+    font-size: 15px;
+}
+}
+    @media (min-width:800px) and (max-width:900px){
+       
+            .burger{
+                color: white;
+                height: 40px;
+                width: 40px;
+                padding-top: 5px;
+                padding-bottom: 20px;
+                display: block;
+                padding-right: 10px;
+            }
+            .burgerclose{
+                color: white;
+                margin: 10px;
+                height: 20px;
+                width: 20px;
+                display: none;
+                padding-bottom: 5px ;
+                padding-right: 15px;
+            }
+            .burgerclose img{
+                height: 25px;
+            }
+            header{
+                width: 100vw;
+                position: fixed;
+            }
+            .link {
+                font-size: 15px;
+                font-family: 'moodern';
+                font-weight: lighter;
+                width: 100%;
+                color: white;
+                background: rgba(0 , 0, 0,65%);
+                text-decoration: none;
+                text-align: center;
+                padding: 20px 0px;
+            }
+            nav{height: 150px;
+                flex-direction: column;
+                align-items: center;
+                height: 0px;
+                width: 100vw;
+                background-color: rgb(0, 0, 0, 60%);
+                margin: 0;
+                display: none;
+                grid-area: nav;
+                position: absolute;
+                top: 70px;
+            }
+        .whitetittle{
+            font-size: 25px;
+            font-family: 'moodern';
+       
+        }
+    .blacktittle{
+        font-size: 25px;
+        font-family: 'moodern';
+        
+    }
+    
+    .container{
+        
+        display: grid;
+        grid-template:  550px  90px 200px 80px 350px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
+        height: 100vh;
+       
+        grid-template-areas: 
+        
+        "contenido contenido"
+        "tittlecuarentena tittlecuarentena"
+        "medidascuarentena medidascuarentena"
+         "tittle-nosotros tittle-nosotros"
+        "nosotros nosotros"
+        "tittle-gallery tittle-gallery"
+        "hr hr"
+        "post-list post-list"
+        "hr2 hr2"
+        "o o"
+        "tittle-contactanos tittle-contactanos"
+        "contactanos contactanos"
+        "footer footer";
+    }
+    
+    .logo-header{
+        width: 50vw;
+        height: 25px;
+        grid-area: logo;
+    }
+    .nav{
+        display: none; grid-area: nav;
+    }
+    .logo-header img{
+      
+       height: 25px;
+    }
+    .tittle-nosotros{
+        width: 100vw;
+    }
+    .subitem.texto h2{
+        font-size: 25px;
+    }
+    .subitem.texto p{
+        font-size: 10px;
+    }
+    .subitem.texto{
+        padding:10px;
+    }
+    .medidas img{
+        padding: 10px;
+        width: 30px;
+    }
+    .tittlemedida{
+     font-size: 15px;
+    }
+    .medidas p{
+     font-size: 10px;
+     width: 33vw;
+    }
+    .nosotros{
+        padding: 0px;
+        width: 100vw;
+        grid-template: repeat(2,50%) /repeat(4,25%);
+        justify-content: center;
+        align-content: center;
+    }
+    .hr{
+        grid-area: hr;
+        padding: 0px ;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .hr hr{
+        margin: 0px;
+        width: 90%;
+        background: black;
+        border: 0px solid white;
+    }
+    .hr2{
+        grid-area: hr2;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    .hr2 hr{
+        background: black;
+        width: 90%;
+        border: 0px;
+        margin: 0px;
+        height: 0.5px;
+    }
+    
+    .tittle-gallery{
+    width: 100vw;
+    margin: 20px 0px 20px 0px;
+    }
+    .tittle-gallery img{
+        padding: 10px;
+        width: 20px;
+        height: 30px;
+    }
+    .overlay{
+        width: 150px;
+        height: 150px;
+    }
+    .post-list{
+        grid-template: repeat(3,150px )/ repeat(3,150px );
+        width: 100vw;
+        gap: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .post-image img {
+        width: 150px; 
+        height: 150px;
+    }
+    .icon-contactanos img{
+        width: 20px;
+    }
+    .mapawidth{
+        width: 450px;
+        height: 450px;
+    }
+    .footer h3{
+        font-size: 15px;
+    }
+    }
+    @media (min-width:900px) and (max-width:1000px){
+       
+            .burger{
+                color: white;
+                height: 40px;
+                width: 40px;
+                padding-top: 5px;
+                padding-bottom: 20px;
+                display: block;
+                padding-right: 10px;
+            }
+            .burgerclose{
+                color: white;
+                margin: 10px;
+                height: 20px;
+                width: 20px;
+                display: none;
+                padding-bottom: 5px ;
+                padding-right: 15px;
+            }
+            .burgerclose img{
+                height: 25px;
+            }
+            header{
+                width: 100vw;
+                position: fixed;
+            }
+            .link {
+                font-size: 15px;
+                font-family: 'moodern';
+                font-weight: lighter;
+                width: 100%;
+                color: white;
+                background: rgba(0 , 0, 0,65%);
+                text-decoration: none;
+                text-align: center;
+                padding: 20px 0px;
+            }
+            nav{height: 150px;
+                flex-direction: column;
+                align-items: center;
+                height: 0px;
+                width: 100vw;
+                background-color: rgb(0, 0, 0, 60%);
+                margin: 0;
+                display: none;
+                grid-area: nav;
+                position: absolute;
+                top: 70px;}
+              
+        .whitetittle{
+            font-size: 25px;
+            font-family: 'moodern';
+        }
+    .blacktittle{
+        font-size: 25px;
+        font-family: 'moodern';
+        
+    }
+    
+    .container{
+        
+        display: grid;
+        grid-template:  550px  90px 200px 80px 450px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
+        height: 100vh;
+       
+        grid-template-areas: 
+        
+        "contenido contenido"
+        "tittlecuarentena tittlecuarentena"
+        "medidascuarentena medidascuarentena"
+         "tittle-nosotros tittle-nosotros"
+        "nosotros nosotros"
+        "tittle-gallery tittle-gallery"
+        "hr hr"
+        "post-list post-list"
+        "hr2 hr2"
+        "o o"
+        "tittle-contactanos tittle-contactanos"
+        "contactanos contactanos"
+        "footer footer";
+    }
+    
+    .logo-header{
+        width: 50vw;
+        height: 25px;
+        grid-area: logo;
+    }
+    .nav{
+        display: none; grid-area: nav;
+    }
+    .logo-header img{
+      
+       height: 25px;
+    }
+    .tittle-nosotros{
+        width: 100vw;
+    }
+    .subitem.texto h2{
+        font-size: 25px;
+    }
+    .subitem.texto p{
+        font-size: 10px;
+    }
+    .subitem.texto{
+        padding:10px;
+    }
+    .medidas img{
+        padding: 10px;
+        width: 30px;
+    }
+    .tittlemedida{
+     font-size: 15px;
+    }
+    .medidas p{
+     font-size: 10px;
+     width: 33vw;
+    }
+    .nosotros{
+        padding: 0px;
+        width: 100vw;
+        grid-template: repeat(2,50%) /repeat(4,25%);
+        justify-content: center;
+        align-content: center;
+    }
+    .hr{
+        grid-area: hr;
+        padding: 0px ;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .hr hr{
+        margin: 0px;
+        width: 90%;
+        background: black;
+        border: 0px solid white;
+    }
+    .hr2{
+        grid-area: hr2;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+    .hr2 hr{
+        background: black;
+        width: 90%;
+        border: 0px;
+        margin: 0px;
+        height: 0.5px;
+    }
+    
+    .tittle-gallery{
+    width: 100vw;
+    margin: 20px 0px 20px 0px;
+    }
+    .tittle-gallery img{
+        padding: 10px;
+        width: 20px;
+        height: 30px;
+    }
+    .overlay{
+        width: 150px;
+        height: 150px;
+    }
+    .post-list{
+        grid-template: repeat(3,150px )/ repeat(3,150px );
+        width: 100vw;
+        gap: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .post-image img {
+        width: 150px; 
+        height: 150px;
+    }
+    .icon-contactanos img{
+        width: 20px;
+    }
+    .mapawidth{
+        width: 450px;
+        height: 450px;
+    }
+    .footer h3{
+        font-size: 15px;
+    }
+    }
+    @media (min-width:1000px) and (max-width:1100px){
+        .burger{
+            color: white;
+            height: 40px;
+            width: 40px;
+            padding-top: 5px;
+            padding-bottom: 20px;
+            display: block;
+            padding-right: 10px;
+        }
+        .burgerclose{
+            color: white;
+            margin: 10px;
+            height: 20px;
+            width: 20px;
+            display: none;
+            padding-bottom: 5px ;
+            padding-right: 15px;
+        }
+        .burgerclose img{
+            height: 25px;
+        }
+        header{
+            width: 100vw;
+            position: fixed;
+        }
+        .link {
+            font-size: 15px;
+            font-family: 'moodern';
+            font-weight: lighter;
+            width: 100%;
+            color: white;
+            background: rgba(0 , 0, 0,65%);
+            text-decoration: none;
+            text-align: center;
+            padding: 20px 0px;
+        }
+        nav{height: 150px;
+            flex-direction: column;
+            align-items: center;
+            height: 0px;
+            width: 100vw;
+            background-color: rgb(0, 0, 0, 60%);
+            margin: 0;
+            display: none;
+            grid-area: nav;
+            position: absolute;
+            top: 70px;}
+          
+    .whitetittle{
+        font-size: 25px;
+        font-family: 'moodern';
+    }
+.blacktittle{
+    font-size: 25px;
+    font-family: 'moodern';
+    
+}
+
+.container{
+    
+    display: grid;
+    grid-template:  550px  90px 200px 80px 450px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
+    height: 100vh;
+   
+    grid-template-areas: 
+    
+    "contenido contenido"
+    "tittlecuarentena tittlecuarentena"
+    "medidascuarentena medidascuarentena"
+     "tittle-nosotros tittle-nosotros"
+    "nosotros nosotros"
+    "tittle-gallery tittle-gallery"
+    "hr hr"
+    "post-list post-list"
+    "hr2 hr2"
+    "o o"
+    "tittle-contactanos tittle-contactanos"
+    "contactanos contactanos"
+    "footer footer";
+}
+
+.logo-header{
+    width: 50vw;
+    height: 25px;
+    grid-area: logo;
+}
+.nav{
+    display: none; grid-area: nav;
+}
+.logo-header img{
+  
+   height: 25px;
+}
+.tittle-nosotros{
+    width: 100vw;
+}
+.subitem.texto h2{
+    font-size: 30px;
+}
+.subitem.texto p{
+    font-size: 10px;
+}
+.subitem.texto{
+    padding:10px;
+}
+.medidas img{
+    padding: 10px;
+    width: 30px;
+}
+.tittlemedida{
+ font-size: 15px;
+}
+.medidas p{
+ font-size: 10px;
+ width: 33vw;
+}
+.nosotros{
+    padding: 0px;
+    width: 100vw;
+    grid-template: repeat(2,50%) /repeat(4,25%);
+    justify-content: center;
+    align-content: center;
+}
+.hr{
+    grid-area: hr;
+    padding: 0px ;
+    display: flex;
+    justify-content: center;
+    
+}
+.hr hr{
+    margin: 0px;
+    width: 90%;
+    background: black;
+    border: 0px solid white;
+}
+.hr2{
+    grid-area: hr2;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.hr2 hr{
+    background: black;
+    width: 90%;
+    border: 0px;
+    margin: 0px;
+    height: 0.5px;
+}
+
+.tittle-gallery{
+width: 100vw;
+margin: 20px 0px 20px 0px;
+}
+.tittle-gallery img{
+    padding: 10px;
+    width: 20px;
+    height: 30px;
+}
+.overlay{
+    width: 150px;
+    height: 150px;
+}
+.post-list{
+    grid-template: repeat(3,150px )/ repeat(3,150px );
+    width: 100vw;
+    gap: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.post-image img {
+    width: 150px; 
+    height: 150px;
+}
+.icon-contactanos img{
+    width: 20px;
+}
+.mapawidth{
+    width: 450px;
+    height: 450px;
+}
+.footer h3{
+    font-size: 15px;
+}
+    }
