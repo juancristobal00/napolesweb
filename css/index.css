@@ -3,50 +3,65 @@ body{
     
 }
 
-.blacktittle{
-    font-size: 35px;
+.blacktittle,.whitetittle{
+    font-size: 30px;
     font-family: 'moodern';
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.whitetittle{
-    font-size: 35px;
-    font-family: 'moodern';
+.tittle-cuarentena::after{
+content: '';
+display: block;
+position: absolute;
+width: 0%;
+height: 2px;
+transition: 0.2s ease;
+background:#EABE3F;
+margin-top: 30px;
 }
-.burger{
-    color: white;
-    margin: 10;
-    height: 30px;
-    float: right;
-    width: 30px;
-    display: none;
+.tittle-cuarentena:hover::after{
+    width: 35%;
+    transition: 0.2s ease ;
 }
-.burgerclose{
-    color: white;
-    margin: 10;
-    height: 20px;
-    float: right;
-    width: 100px;
-    display: none;
-    padding: 5 ;}
+h1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition: 0.2s ease;
+    background:#EABE3F;
+    margin-top: 30px;
+}
+h1:hover::after{
+    width: 20%;
+    transition: 0.2s ease ;
+}
+.burger,.burgerclose{
+ display: none;
+}
 .link{
     color: white;
     padding-top:23.4px;
     padding-bottom: 23.4px;
     padding-right: 23px;
     padding-left: 23px;
-    
     text-decoration: none;
     font-family: 'moodern';
     
 }
-.link:hover{
-    background: white;
-    color: black;
-    cursor: pointer;
-    text-decoration: underline;
-    transition: 2s;
+.link::after{
+content: '';
+display: block;
+width: 0%;
+height: 2px;
+background: #EABE3F;
+transition: width .3s;
+}
+.link:hover::after{
+    width: 100%;
+    transition: width .3s ;
 }
 header{
     width: 100%;
@@ -57,7 +72,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 nav{
     color: white;
@@ -66,8 +80,6 @@ nav{
     width: 350px;
     display: flex;
     padding-right: 20px;
-    
-    
 }
 
 
@@ -79,15 +91,15 @@ nav{
 }
 .container{
     display: grid;
-    grid-template:  700px 90px 300px 80px 800px 135px 1px 700px 1px 60px 135px 1050px 50px/100vw ;
+    grid-template:  700px 80px 800px 90px 300px 135px 1px 700px 1px 60px 135px 1050px 75px/100vw ;
     height: 100vh;
    
     grid-template-areas: 
                          "contenido contenido"
-                         "tittlecuarentena tittlecuarentena"
-                         "medidascuarentena medidascuarentena"
                           "tittle-nosotros tittle-nosotros"
                          "nosotros nosotros"
+                         "tittlecuarentena tittlecuarentena"
+                         "medidascuarentena medidascuarentena"
                          "tittle-gallery tittle-gallery"
                          "hr hr"
                          "post-list post-list"
@@ -99,11 +111,6 @@ nav{
    
                          
 }
-
-
-.item:nth-of-type(1){
-    background-color: black;
-}
 .tittle-cuarentena{
     display: flex;
     justify-content: center;
@@ -114,13 +121,15 @@ nav{
     width: 100vw;
     background: black;
     color: white;
-    text-shadow: 2px 5px 5px black;
+   
 }
 .medidas-cuarentena{
     width: 100vw;
     grid-area: medidascuarentena;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content: center;
+    grid-template: 300px/repeat(3,300px);
+    background:#e4e3e3;
 }
 .tittlemedida{
     font-family:'moodern' ;
@@ -130,13 +139,16 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
+    width: 100%;
     flex-direction: column;
-    font-family:'moodern'
+    font-family:'moodern';
+    grid-area: "medidas";
 }
 .medidas img{
- width: 50px;
-}
+    width: 50px;
+    padding-bottom: 10px;}
+.medidas p{
+padding: 0px 20px 0px 20px;;}
 .contenido{
     grid-area: contenido;
     background-image: url('../img/portada.png') ;
@@ -168,15 +180,11 @@ nav{
     background-size: cover;
     grid-column: 3/5;
     grid-row: 1/3;
-    
-   
-    
 }
 .subitem.texto{
-    background: #e4e3e3;
+    background:white;
     grid-column: 1/3;
     grid-row: 1/3;
-   
     padding: 30px;
     
 }
@@ -191,41 +199,19 @@ nav{
     text-align: center;
     font-family: 'moodern';
     font-weight: lighter;
+    padding: 0px 10px 0px 10px;
+    font-size: 22.5px;
 }
 .subitem.texto:hover h2 {
     color: #EABE3F	;
 }
-
-.footer{
-    grid-area: footer;
+.tittle-gallery img{padding: 15px;}
+.tittle-gallery h1{margin: 0;}
+.tittle-gallery{
 }
-
-
-    .tittle-gallery{
-        grid-area: tittle-gallery;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5em;
-        flex-direction: column;
-        width: 100vw;
-       
-     
-    
-
-    }
-    .tittle-gallery img{
-        padding: 15px;
-    }
-    .tittle-gallery h1{
-       margin: 0;
-    }
 .post{
     position: relative;
-    overflow: hidden;
-    display: FLEX;
-    
+    background-color: black;
 }
 .hr{
     grid-area: hr;
@@ -257,7 +243,6 @@ nav{
 .post-list{
     width: 100vw;
     grid-area: post-list;
-    
     position: relative;
     display: grid;
     grid-template: repeat(3,200px )/ repeat(3,200px );
@@ -265,13 +250,11 @@ nav{
     justify-content: center;
     align-content: center;
 }
-.post-image{
+.post-image,
+.post-image img{
     margin: 0;
     width: 200px;
-}
-.post-image img{
-    width: 200px;
-    width: 200px;
+    height: 200px;
 }
 .overlay{
     position: absolute;
@@ -279,13 +262,20 @@ nav{
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 60%);
+    background: rgba(255, 255, 255, 0.6);
     width: 200px;
     height: 200px;
     display: none;
     justify-content: center;
     align-items: center;
     color: white;
+    flex-direction: column;
+}
+.overlay figure{
+    margin: 0px;
+}
+.overlay figure img{
+    width: 15px;
 }
 .post:hover .overlay{
     display:flex;
@@ -310,6 +300,17 @@ nav{
     grid-area: tittle-contactanos;
 
 }
+.tittle-gallery{
+    grid-area: tittle-gallery;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    flex-direction: column;
+    width: 100vw;
+    background: 
+}
 .contactanos{
     grid-area: contactanos;
     background: black;
@@ -323,7 +324,7 @@ nav{
    display: flex;
    justify-content: space-around;
 }
-.icon-contactanos img{
+.icon{
     width: 30px;
 }
 .footer{
@@ -334,40 +335,23 @@ align-items: center;
 flex-direction: column;
 color: white;
 width: 100vw;
-   
+grid-area: footer;   
+font-family:'noto sans jp' ;
 }
 h3{
-   margin: 0;
-  
+    margin: 0px;
 }
-
-@media (min-width:320px) and (max-width:400px){
+@media (min-width:300px) and (max-width:700px){
   
-    .burger{
-        color: white;
-        height: 40px;
-        width: 40px;
-        padding-top: 5px;
-        padding-bottom: 20px;
-        display: block;
-        padding-right: 5px;
-    }
+    .burger,
     .burgerclose{
         color: white;
-        margin: 10px;
-        height: 20px;
         width: 20px;
-        display: none;
-        padding-bottom: 5px ;
+        height: 20px;
         padding-right: 10px;
     }
-    .burgerclose img{
-        height: 25px;
-    }
-    header{
-        width: 100vw;
-        position: relsative;
-    }
+    .burger{display: block;}
+    .burgerclose{display: none;}
     .link{
         font-size: 15px;
         font-family: 'noto sans jp';
@@ -376,9 +360,17 @@ h3{
         color: white;
         background: rgba(0 , 0, 0,65%);
         text-decoration: none;
-        
+        font-family: 'moodern';
         text-align: center;
     }
+    .link::after{
+        height: 0px;
+        }
+        .link:hover{
+            background: white;
+            color: black;
+            transition: 2s;
+        }
     nav{height: 150px;
         flex-direction: column;
         align-items: center;
@@ -391,33 +383,40 @@ h3{
         position: absolute;
         top: 70px;
       
-    }
+    }}
 
 
-.whitetittle{
-        font-size: 20px;
-        font-family: 'moodern';
-    }
-.blacktittle{
-    font-size: 20px;
-    font-family: 'moodern';
+@media (min-width:300px) and (max-width:400px){
+.whitetittle,.blacktittle{
+    font-size: 17.5px;}
+.icon{ width: 15px; }
+
+.footer h3{ 
+    font-size: 12px;
+    font-family: 'moodern'; }
+
+.tittlemedida{ font-size:8.5px; } 
+
+.medidas p{
+    font-size: 6.5px;
+    height: 50px;
 }
-.overlay{
-    width: 100px;
-    height: 100px;
+.medidas img{
+    width: 30px;
+}
+.medidas-cuarentena{
+    grid-template: 150px/repeat(3,33%);
 }
 .container{
-    
     display: grid;
-    grid-template:  550px  90px 200px 50px 175.200px 70px 1px 360px 0.5px 40px 100px 400px 50px/ 1fr ;
+    grid-template:  100vh 55px 175.200px 55px 150px 85px 1px 300px 1px 60px 100px 350px 50px/100vw ;
     height: 100vh;
-   
     grid-template-areas: 
     "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
      "tittle-nosotros tittle-nosotros"
     "nosotros nosotros"
+      "tittlecuarentena tittlecuarentena"
+    "medidascuarentena medidascuarentena"
     "tittle-gallery tittle-gallery"
     "hr hr"
     "post-list post-list"
@@ -425,937 +424,63 @@ h3{
     "o o"
     "tittle-contactanos tittle-contactanos"
     "contactanos contactanos"
-    "footer footer";
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
-    
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
+    "footer footer"
 
-.logo-header{
-    width: 50vw;
-    height: 30px;
-    grid-area: logo;
-}
+   }
+.subitem.texto{  padding: 0px;}
 
-.tittle-cuarentena{
-    font-size: 25px;
-}
-.medidas{
+.subitem.texto h2{ font-size: 12.5px;}
 
-}
-.medidas img{
-    padding: 5px;
-    width: 30px;
-}
-.tittlemedida{
- font-size: 10px;
-}
-.medidas p{
- font-size: 10px;
- width: 33vw;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 15px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    
-}
-.tittle-gallery{
-width: 100vw;
-padding: 0 10 0 10
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 15px;
-}
+.subitem.texto p{font-size: 9px;}
+
 .post-list{
-    grid-template: repeat(3,100px )/ repeat(3,100px );
-    width: 100vw;
+    display: grid;
+    grid-template: repeat(3,85px )/ repeat(3,85px );
     gap: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    justify-content: center;
-    
 }
-.contactanos{
-    height: 400px;
-    
-}
-.post-image img {
-    width: 100px;
-    height: 100px;
-}
-.icon-contactanos img{
-    width: 15px;
-}
+.post-image img,
+        .overlay{
+            width: 85px;
+            height: 85px;
+        }
 .mapawidth{
     width: 300px;
     height: 300px;
-}
-.footer h3{
-    font-size: 15px;
-}
-}
+}}
+
+
 @media (min-width:400px) and (max-width:500px){
-   
-    .burger{
-        color: white;
-        height: 40px;
-        width: 40px;
-        padding-top: 5px;
-        padding-bottom: 20px;
-        display: block;
-        padding-right: 10px;
-    }
-    .burgerclose{
-        color: white;
-        margin: 10px;
-        height: 20px;
-        width: 20px;
-        display: none;
-        padding-bottom: 5px ;
-        padding-right: 20px;
-    }
-    .burgerclose img{
-        height: 25px;
-    }
-    header{
-        width: 100vw;
-        position: fixed;
-    }
-    .link {
-        font-size: 15px;
-        font-family: 'noto sans jp';
-        width: 100%;
-        color: white;
-        background: rgba(0 , 0, 0,65%);
-        text-decoration: none;
-        text-align: center;
-        padding: 20px 0px;
-    }
-    nav{height: 150px;
-        flex-direction: column;
-        align-items: center;
-        height: 0px;
-        width: 100vw;
-        background-color: rgb(0, 0, 0, 60%);
-        margin: 0;
-        display: none;
-        grid-area: nav;
-        position: absolute;
-        top: 70px;
-      
-    }
-
-    .whitetittle{
-        font-size: 20px;
-        font-family: 'moodern';
-    }
-.blacktittle{
-    font-size: 20px;
-    font-family: 'moodern';
-}
-
-.container{
+    .whitetittle,
+    .blacktittle{font-size: 17.5px;}
     
-    display: grid;
-    grid-template:  550px  90px 200px 50px 200px 100px 1px 420px 0.5px 50px 100px 500px 50px/ 1fr ;
-    height: 100vh;
-   
-    grid-template-areas: 
+    .icon{ width: 15px; }
     
-    "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
-     "tittle-nosotros tittle-nosotros"
-    "nosotros nosotros"
-    "tittle-gallery tittle-gallery"
-    "hr hr"
-    "post-list post-list"
-    "hr2 hr2"
-    "o o"
-    "tittle-contactanos tittle-contactanos"
-    "contactanos contactanos"
-    "footer footer";
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
+    .footer h3{ 
+        font-size: 12px;
+        font-family: 'moodern'; }
     
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
-.logo-header{
-    width: 50vw;
-    height: 25px;
-    grid-area: logo;
-}
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-    height: 25px;
-}
-.medidas img{
-    padding: 10px;
-    width: 30px;
-}
-.tittlemedida{
- font-size: 10px;
-}
-.medidas p{
- font-size: 10px;
- width: 33vw;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 17.5px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    justify-content: center;
-    align-content: center;
-}
-.tittle-gallery{
-width: 100vw;
-padding: 0 10 0 10
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 15px;
-    height: 20px;
-}
-.overlay{
-    width: 115px;
-    height: 115px;
-}
-.post-list{
-    grid-template: repeat(3,115px )/ repeat(3,115px );
-    width: 100vw;
-    gap: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.post-image img {
-    width: 115px;
-    height: 115px;
-}
-.icon-contactanos img{
-    width: 15px;
-}
-.mapawidth{
-    width: 375px;
-    height: 375px;
-}
-.footer h3{
-    font-size: 15px;
-}
-}
-
-@media (min-width:500px) and (max-width:600px){
-  
-    .burger{
-        color: white;
-        height: 40px;
-        width: 40px;
-        padding-top: 5px;
-        padding-bottom: 20px;
-        display: block;
-        padding-right: 10px;
-    }
-    .burgerclose{
-        color: white;
-        margin: 10px;
-        height: 20px;
-        width: 20px;
-        display: none;
-        padding-bottom: 5px ;
-        padding-right: 15px;
-    }
-    .burgerclose img{
-        height: 25px;
-    }
-    header{
-        width: 100vw;
-        position: fixed;
-    }
-    .link {
-        font-size: 15px;
-        font-family: 'moodern';
-        font-weight: lighter;
-        width: 100%;
-        color: white;
-        background: rgba(0 , 0, 0,65%);
-        text-decoration: none;
-        text-align: center;
-        padding: 20px 0px;
-    }
-    nav{height: 150px;
-        flex-direction: column;
-        align-items: center;
-        height: 0px;
-        width: 100vw;
-        background-color: rgb(0, 0, 0, 60%);
-        margin: 0;
-        display: none;
-        grid-area: nav;
-        position: absolute;
-        top: 70px;
-      
-    }
-
-        
-    .whitetittle{
-        font-size: 20px;
-        font-family: 'moodern';
-    }
-.blacktittle{
-    font-size: 20px;
-}
-
-.container{
+    .tittlemedida{ font-size:10px; } 
     
-    display: grid;
-    grid-template:  550px  90px 200px 80px 250px 100px 1px 500px 1px 50px 115px 500px 50px/ 1fr;
-    height: 100vh;
-   
-    grid-template-areas: 
-   
-    "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
-     "tittle-nosotros tittle-nosotros"
-    "nosotros nosotros"
-    "tittle-gallery tittle-gallery"
-    "hr hr"
-    "post-list post-list"
-    "hr2 hr2"
-    "o o"
-    "tittle-contactanos tittle-contactanos"
-    "contactanos contactanos"
-    "footer footer";
-}
-
-.logo-header{
-    width: 50vw;
-    height: 25px;
-    grid-area: logo;
-}
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-  
-   height: 25px;
-}
-.medidas img{
-    width: 40px;
-    padding: 10px;
-}
-.tittlemedida{
- font-size: 10px;
-}
-.medidas p{
- font-size: 10px;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 20px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.subitem.foto img{
-    width: 100%;
-    height: 100%;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    justify-content: center;
-    align-content: center;
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
-    
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
-.tittle-gallery{
-width: 100vw;
-margin: 20px 0px 20px 0px;
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 15px;
-    height: 20px;
-}
-.overlay{
-    width: 130px;
-    height: 130px;
-}
-.post-list{
-    grid-template: repeat(3,130px )/ repeat(3,130px );
-    width: 100vw;
-    gap: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.post-image img {
-    width: 130px; 
-    height: 130px;
-}
-.icon-contactanos img{
-    width: 15px;
-}
-.mapawidth{
-    width: 450px;
-    height: 450px;
-}
-.footer h3{
-    font-size: 15px;
-}
-}
-@media (min-width:600px) and (max-width:700px){
-   
-    .burger{
-        color: white;
-        height: 40px;
-        width: 40px;
-        padding-top: 5px;
-        padding-bottom: 20px;
-        display: block;
-        padding-right: 10px;
+    .medidas p{
+        font-size: 8px;
+        height: 50px;
     }
-    .burgerclose{
-        color: white;
-        margin: 10px;
-        height: 20px;
-        width: 20px;
-        display: none;
-        padding-bottom: 5px ;
-        padding-right: 15px;
+    .medidas img{
+        width: 30px;
     }
-    .burgerclose img{
-        height: 25px;
+    .medidas-cuarentena{
+        grid-template: 150px/repeat(3,33%);
     }
-    header{
-        width: 100vw;
-        position: fixed;
-    }
-    .link {
-        font-size: 15px;
-        font-family: 'moodern';
-        font-weight: lighter;
-        width: 100%;
-        color: white;
-        background: rgba(0 , 0, 0,65%);
-        text-decoration: none;
-        text-align: center;
-        padding: 20px 0px;
-    }
-    nav{height: 150px;
-        flex-direction: column;
-        align-items: center;
-        height: 0px;
-        width: 100vw;
-        background-color: rgb(0, 0, 0, 60%);
-        margin: 0;
-        display: none;
-        grid-area: nav;
-        position: absolute;
-        top: 70px;
-      
-    }
-        
-    .whitetittle{
-        font-size: 25px;
-        font-family: 'moodern';
-    }
-.blacktittle{
-    font-size: 25px;
-    font-family: 'moodern';
-}
-
-.container{
-    
-    display: grid;
-    grid-template:  550px  90px 200px 80px 300px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
-    height: 100vh;
-   
-    grid-template-areas: 
-    
-    "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
-     "tittle-nosotros tittle-nosotros"
-    "nosotros nosotros"
-    "tittle-gallery tittle-gallery"
-    "hr hr"
-    "post-list post-list"
-    "hr2 hr2"
-    "o o"
-    "tittle-contactanos tittle-contactanos"
-    "contactanos contactanos"
-    "footer footer";
-}
-
-.logo-header{
-    width: 50vw;
-    height: 25px;
-    grid-area: logo;
-}
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-  
-   height: 25px;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 20px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.medidas img{
-    padding: 10px;
-    width: 30px;
-}
-.tittlemedida{
- font-size: 15px;
-}
-.medidas p{
- font-size: 10px;
- width: 33vw;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    justify-content: center;
-    align-content: center;
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
-    
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
-
-.tittle-gallery{
-width: 100vw;
-margin: 20px 0px 20px 0px;
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 15px;
-    height: 25px;
-}
-.overlay{
-    width: 150px;
-    height: 150px;
-}
-.post-list{
-    grid-template: repeat(3,150px )/ repeat(3,150px );
-    width: 100vw;
-    gap: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.post-image img {
-    width: 150px; 
-    height: 150px;
-}
-.icon-contactanos img{
-    width: 20px;
-}
-.mapawidth{
-    width: 450px;
-    height: 450px;
-}
-.footer h3{
-    font-size: 15px;
-}
-}
-@media (min-width:700px) and (max-width:800px){
-    .burger{
-        color: white;
-        height: 40px;
-        width: 40px;
-        padding-top: 5px;
-        padding-bottom: 20px;
-        display: block;
-        padding-right: 10px;
-    }
-    .burgerclose{
-        color: white;
-        margin: 10px;
-        height: 20px;
-        width: 20px;
-        display: none;
-        padding-bottom: 5px ;
-        padding-right: 15px;
-    }
-    .burgerclose img{
-        height: 25px;
-    }
-    header{
-        width: 100vw;
-        position: fixed;
-    }
-    .link {
-        font-size: 15px;
-        font-family: 'moodern';
-        font-weight: lighter;
-        width: 100%;
-        color: white;
-        background: rgba(0 , 0, 0,65%);
-        text-decoration: none;
-        text-align: center;
-        padding: 20px 0px;
-    }
-    nav{height: 150px;
-        flex-direction: column;
-        align-items: center;
-        height: 0px;
-        width: 100vw;
-        background-color: rgb(0, 0, 0, 60%);
-        margin: 0;
-        display: none;
-        grid-area: nav;
-        position: absolute;
-        top: 70px;
-      
-    }
-    .whitetittle{
-        font-size: 25px;
-        font-family: 'moodern';
-        
-    }
-.blacktittle{
-    font-size: 25px;
-    font-family: 'moodern';
-
-}
-
-.container{
-    
-    display: grid;
-    grid-template:  550px  90px 200px 80px 350px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
-    height: 100vh;
-   
-    grid-template-areas: 
-    
-    "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
-     "tittle-nosotros tittle-nosotros"
-    "nosotros nosotros"
-    "tittle-gallery tittle-gallery"
-    "hr hr"
-    "post-list post-list"
-    "hr2 hr2"
-    "o o"
-    "tittle-contactanos tittle-contactanos"
-    "contactanos contactanos"
-    "footer footer";
-}
-
-.logo-header{
-    width: 50vw;
-    height: 25px;
-    grid-area: logo;
-}
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-  
-   height: 25px;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 25px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.medidas img{
-    padding: 10px;
-    width: 30px;
-}
-.tittlemedida{
- font-size: 15px;
-}
-.medidas p{
- font-size: 10px;
- width: 33vw;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    justify-content: center;
-    align-content: center;
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
-    
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
-
-.tittle-gallery{
-width: 100vw;
-margin: 20px 0px 20px 0px;
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 20px;
-    height: 30px;
-}
-.overlay{
-    width: 150px;
-    height: 150px;
-}
-.post-list{
-    grid-template: repeat(3,150px )/ repeat(3,150px );
-    width: 100vw;
-    gap: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.post-image img {
-    width: 150px; 
-    height: 150px;
-}
-.icon-contactanos img{
-    width: 20px;
-}
-.mapawidth{
-    width: 450px;
-    height: 450px;
-}
-.footer h3{
-    font-size: 15px;
-}
-}
-    @media (min-width:800px) and (max-width:900px){
-       
-            .burger{
-                color: white;
-                height: 40px;
-                width: 40px;
-                padding-top: 5px;
-                padding-bottom: 20px;
-                display: block;
-                padding-right: 10px;
-            }
-            .burgerclose{
-                color: white;
-                margin: 10px;
-                height: 20px;
-                width: 20px;
-                display: none;
-                padding-bottom: 5px ;
-                padding-right: 15px;
-            }
-            .burgerclose img{
-                height: 25px;
-            }
-            header{
-                width: 100vw;
-                position: fixed;
-            }
-            .link {
-                font-size: 15px;
-                font-family: 'moodern';
-                font-weight: lighter;
-                width: 100%;
-                color: white;
-                background: rgba(0 , 0, 0,65%);
-                text-decoration: none;
-                text-align: center;
-                padding: 20px 0px;
-            }
-            nav{height: 150px;
-                flex-direction: column;
-                align-items: center;
-                height: 0px;
-                width: 100vw;
-                background-color: rgb(0, 0, 0, 60%);
-                margin: 0;
-                display: none;
-                grid-area: nav;
-                position: absolute;
-                top: 70px;
-            }
-        .whitetittle{
-            font-size: 25px;
-            font-family: 'moodern';
-       
-        }
-    .blacktittle{
-        font-size: 25px;
-        font-family: 'moodern';
-        
-    }
-    
     .container{
-        
         display: grid;
-        grid-template:  550px  90px 200px 80px 350px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
+        grid-template:  100vh 55px 225.200px 55px 150px 100px 1px 350px 1px 60px 100px 400px 50px/100vw ;
         height: 100vh;
-       
         grid-template-areas: 
-        
         "contenido contenido"
-        "tittlecuarentena tittlecuarentena"
-        "medidascuarentena medidascuarentena"
          "tittle-nosotros tittle-nosotros"
         "nosotros nosotros"
+        "tittlecuarentena tittlecuarentena"
+        "medidascuarentena medidascuarentena"
         "tittle-gallery tittle-gallery"
         "hr hr"
         "post-list post-list"
@@ -1363,483 +488,365 @@ margin: 20px 0px 20px 0px;
         "o o"
         "tittle-contactanos tittle-contactanos"
         "contactanos contactanos"
-        "footer footer";
-    }
+        "footer footer"
     
-    .logo-header{
-        width: 50vw;
-        height: 25px;
-        grid-area: logo;
-    }
-    .nav{
-        display: none; grid-area: nav;
-    }
-    .logo-header img{
-      
-       height: 25px;
-    }
-    .tittle-nosotros{
-        width: 100vw;
-    }
-    .subitem.texto h2{
-        font-size: 25px;
-    }
-    .subitem.texto p{
-        font-size: 10px;
-    }
-    .subitem.texto{
-        padding:10px;
-    }
-    .medidas img{
-        padding: 10px;
-        width: 30px;
-    }
-    .tittlemedida{
-     font-size: 15px;
-    }
-    .medidas p{
-     font-size: 10px;
-     width: 33vw;
-    }
-    .nosotros{
-        padding: 0px;
-        width: 100vw;
-        grid-template: repeat(2,50%) /repeat(4,25%);
-        justify-content: center;
-        align-content: center;
-    }
-    .hr{
-        grid-area: hr;
-        padding: 0px ;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .hr hr{
-        margin: 0px;
-        width: 90%;
-        background: black;
-        border: 0px solid white;
-    }
-    .hr2{
-        grid-area: hr2;
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-    }
-    .hr2 hr{
-        background: black;
-        width: 90%;
-        border: 0px;
-        margin: 0px;
-        height: 0.5px;
-    }
+       }
+    .subitem.texto{  padding: 0px;}
     
-    .tittle-gallery{
-    width: 100vw;
-    margin: 20px 0px 20px 0px;
-    }
-    .tittle-gallery img{
-        padding: 10px;
-        width: 20px;
-        height: 30px;
-    }
-    .overlay{
-        width: 150px;
-        height: 150px;
-    }
+    .subitem.texto h2{ font-size: 15px;}
+    
+    .subitem.texto p{font-size: 10px;}
+    
     .post-list{
-        grid-template: repeat(3,150px )/ repeat(3,150px );
-        width: 100vw;
-        gap: 5px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    .post-image img {
-        width: 150px; 
-        height: 150px;
-    }
-    .icon-contactanos img{
-        width: 20px;
-    }
-    .mapawidth{
-        width: 450px;
-        height: 450px;
-    }
-    .footer h3{
-        font-size: 15px;
-    }
-    }
-    @media (min-width:900px) and (max-width:1000px){
-       
-            .burger{
-                color: white;
-                height: 40px;
-                width: 40px;
-                padding-top: 5px;
-                padding-bottom: 20px;
-                display: block;
-                padding-right: 10px;
-            }
-            .burgerclose{
-                color: white;
-                margin: 10px;
-                height: 20px;
-                width: 20px;
-                display: none;
-                padding-bottom: 5px ;
-                padding-right: 15px;
-            }
-            .burgerclose img{
-                height: 25px;
-            }
-            header{
-                width: 100vw;
-                position: fixed;
-            }
-            .link {
-                font-size: 15px;
-                font-family: 'moodern';
-                font-weight: lighter;
-                width: 100%;
-                color: white;
-                background: rgba(0 , 0, 0,65%);
-                text-decoration: none;
-                text-align: center;
-                padding: 20px 0px;
-            }
-            nav{height: 150px;
-                flex-direction: column;
-                align-items: center;
-                height: 0px;
-                width: 100vw;
-                background-color: rgb(0, 0, 0, 60%);
-                margin: 0;
-                display: none;
-                grid-area: nav;
-                position: absolute;
-                top: 70px;}
-              
-        .whitetittle{
-            font-size: 25px;
-            font-family: 'moodern';
-        }
-    .blacktittle{
-        font-size: 25px;
-        font-family: 'moodern';
-        
-    }
-    
-    .container{
-        
         display: grid;
-        grid-template:  550px  90px 200px 80px 450px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
-        height: 100vh;
-       
-        grid-template-areas: 
-        
-        "contenido contenido"
-        "tittlecuarentena tittlecuarentena"
-        "medidascuarentena medidascuarentena"
-         "tittle-nosotros tittle-nosotros"
-        "nosotros nosotros"
-        "tittle-gallery tittle-gallery"
-        "hr hr"
-        "post-list post-list"
-        "hr2 hr2"
-        "o o"
-        "tittle-contactanos tittle-contactanos"
-        "contactanos contactanos"
-        "footer footer";
+        grid-template: repeat(3,100px )/ repeat(3,100px );
+        gap: 2px;
     }
-    
-    .logo-header{
-        width: 50vw;
-        height: 25px;
-        grid-area: logo;
-    }
-    .nav{
-        display: none; grid-area: nav;
-    }
-    .logo-header img{
-      
-       height: 25px;
-    }
-    .tittle-nosotros{
-        width: 100vw;
-    }
-    .subitem.texto h2{
-        font-size: 25px;
-    }
-    .subitem.texto p{
-        font-size: 10px;
-    }
-    .subitem.texto{
-        padding:10px;
-    }
-    .medidas img{
-        padding: 10px;
-        width: 30px;
-    }
-    .tittlemedida{
-     font-size: 15px;
-    }
-    .medidas p{
-     font-size: 10px;
-     width: 33vw;
-    }
-    .nosotros{
-        padding: 0px;
-        width: 100vw;
-        grid-template: repeat(2,50%) /repeat(4,25%);
-        justify-content: center;
-        align-content: center;
-    }
-    .hr{
-        grid-area: hr;
-        padding: 0px ;
-        display: flex;
-        justify-content: center;
-        
-    }
-    .hr hr{
-        margin: 0px;
-        width: 90%;
-        background: black;
-        border: 0px solid white;
-    }
-    .hr2{
-        grid-area: hr2;
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-    }
-    .hr2 hr{
-        background: black;
-        width: 90%;
-        border: 0px;
-        margin: 0px;
-        height: 0.5px;
-    }
-    
-    .tittle-gallery{
-    width: 100vw;
-    margin: 20px 0px 20px 0px;
-    }
-    .tittle-gallery img{
-        padding: 10px;
-        width: 20px;
-        height: 30px;
-    }
-    .overlay{
-        width: 150px;
-        height: 150px;
-    }
-    .post-list{
-        grid-template: repeat(3,150px )/ repeat(3,150px );
-        width: 100vw;
-        gap: 5px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    .post-image img {
-        width: 150px; 
-        height: 150px;
-    }
-    .icon-contactanos img{
-        width: 20px;
-    }
+    .post-image img,
+        .overlay{
+            width: 100px;
+            height: 100px;
+        }
     .mapawidth{
-        width: 450px;
-        height: 450px;
-    }
-    .footer h3{
-        font-size: 15px;
-    }
-    }
-    @media (min-width:1000px) and (max-width:1100px){
-        .burger{
-            color: white;
-            height: 40px;
-            width: 40px;
-            padding-top: 5px;
-            padding-bottom: 20px;
-            display: block;
-            padding-right: 10px;
-        }
-        .burgerclose{
-            color: white;
-            margin: 10px;
-            height: 20px;
-            width: 20px;
-            display: none;
-            padding-bottom: 5px ;
-            padding-right: 15px;
-        }
-        .burgerclose img{
-            height: 25px;
-        }
-        header{
-            width: 100vw;
-            position: fixed;
-        }
-        .link {
+        width: 350px;
+        height: 350px;
+    }}
+    @media (min-width:500px) and (max-width:600px){
+        .whitetittle,
+        .blacktittle{font-size: 22.5px;}
+        .icon{ width: 20px; }
+        
+        .footer h3{ 
             font-size: 15px;
-            font-family: 'moodern';
-            font-weight: lighter;
-            width: 100%;
-            color: white;
-            background: rgba(0 , 0, 0,65%);
-            text-decoration: none;
-            text-align: center;
-            padding: 20px 0px;
+            font-family: 'moodern'; }
+        
+        .tittlemedida{ font-size:12.5px; } 
+        
+        .medidas p{
+            font-size: 10px;
+            height: 50px;
         }
-        nav{height: 150px;
-            flex-direction: column;
-            align-items: center;
-            height: 0px;
-            width: 100vw;
-            background-color: rgb(0, 0, 0, 60%);
-            margin: 0;
-            display: none;
-            grid-area: nav;
-            position: absolute;
-            top: 70px;}
-          
-    .whitetittle{
-        font-size: 25px;
-        font-family: 'moodern';
+        .medidas img{
+            width: 40px;
+        }
+        .medidas-cuarentena{
+            grid-template: 200px/repeat(3,33%);
+        }
+        .container{
+            display: grid;
+            grid-template:  100vh 65px 275.200px 65px 200px 110px 1px 400px 1px 60px 110px 500px 55px/100vw ;
+            height: 100vh;
+            grid-template-areas: 
+            "contenido contenido"
+             "tittle-nosotros tittle-nosotros"
+            "nosotros nosotros"
+            "tittlecuarentena tittlecuarentena"
+            "medidascuarentena medidascuarentena"
+            "tittle-gallery tittle-gallery"
+            "hr hr"
+            "post-list post-list"
+            "hr2 hr2"
+            "o o"
+            "tittle-contactanos tittle-contactanos"
+            "contactanos contactanos"
+            "footer footer"
+        
+           }
+        .subitem.texto{  padding: 0px;}
+        
+        .subitem.texto h2{ font-size: 20px;}
+        
+        .subitem.texto p{
+            font-size: 12.5px;
+        }
+        
+        .post-list{
+            display: grid;
+            grid-template: repeat(3,120px )/ repeat(3,120px );
+            gap: 5px;
+        }
+        .post-image img,
+        .overlay{
+            width: 120px;
+            height: 120px;
+        }
+        .mapawidth{
+            width: 450px;
+            height: 450px;
+        }  
     }
-.blacktittle{
-    font-size: 25px;
-    font-family: 'moodern';
-    
-}
-
-.container{
-    
-    display: grid;
-    grid-template:  550px  90px 200px 80px 450px 100px 1px 550px 1px 50px 125px 500px 50px/ 1fr ;
-    height: 100vh;
-   
-    grid-template-areas: 
-    
-    "contenido contenido"
-    "tittlecuarentena tittlecuarentena"
-    "medidascuarentena medidascuarentena"
-     "tittle-nosotros tittle-nosotros"
-    "nosotros nosotros"
-    "tittle-gallery tittle-gallery"
-    "hr hr"
-    "post-list post-list"
-    "hr2 hr2"
-    "o o"
-    "tittle-contactanos tittle-contactanos"
-    "contactanos contactanos"
-    "footer footer";
-}
-
-.logo-header{
-    width: 50vw;
-    height: 25px;
-    grid-area: logo;
-}
-.nav{
-    display: none; grid-area: nav;
-}
-.logo-header img{
-  
-   height: 25px;
-}
-.tittle-nosotros{
-    width: 100vw;
-}
-.subitem.texto h2{
-    font-size: 30px;
-}
-.subitem.texto p{
-    font-size: 10px;
-}
-.subitem.texto{
-    padding:10px;
-}
-.medidas img{
-    padding: 10px;
-    width: 30px;
-}
-.tittlemedida{
- font-size: 15px;
-}
-.medidas p{
- font-size: 10px;
- width: 33vw;
-}
-.nosotros{
-    padding: 0px;
-    width: 100vw;
-    grid-template: repeat(2,50%) /repeat(4,25%);
-    justify-content: center;
-    align-content: center;
-}
-.hr{
-    grid-area: hr;
-    padding: 0px ;
-    display: flex;
-    justify-content: center;
-    
-}
-.hr hr{
-    margin: 0px;
-    width: 90%;
-    background: black;
-    border: 0px solid white;
-}
-.hr2{
-    grid-area: hr2;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-}
-.hr2 hr{
-    background: black;
-    width: 90%;
-    border: 0px;
-    margin: 0px;
-    height: 0.5px;
-}
-
-.tittle-gallery{
-width: 100vw;
-margin: 20px 0px 20px 0px;
-}
-.tittle-gallery img{
-    padding: 10px;
-    width: 20px;
-    height: 30px;
-}
-.overlay{
-    width: 150px;
-    height: 150px;
-}
-.post-list{
-    grid-template: repeat(3,150px )/ repeat(3,150px );
-    width: 100vw;
-    gap: 5px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.post-image img {
-    width: 150px; 
-    height: 150px;
-}
-.icon-contactanos img{
-    width: 20px;
-}
-.mapawidth{
-    width: 450px;
-    height: 450px;
-}
-.footer h3{
-    font-size: 15px;
-}
-    }
+    @media (min-width:600px) and (max-width:700px){
+        .whitetittle,
+        .blacktittle{font-size: 25px;}
+        .icon{ width: 22.5px; }
+        
+        .footer h3{ 
+            font-size: 15px;
+            font-family: 'moodern'; }
+        
+        .tittlemedida{ font-size:15px; } 
+        
+        .medidas p{
+            font-size: 12px;
+            height: 70px;
+        }
+        .medidas img{
+            width: 40px;
+        }
+        .medidas-cuarentena{
+            grid-template: 200px/repeat(3,33%);
+        }
+        .container{
+            display: grid;
+            grid-template:  100vh  70px 325.200px 70px 200px 115px 1px 500px 1px 60px 115px 600px 50px/100vw ;
+            height: 100vh;
+            grid-template-areas: 
+            "contenido contenido"
+             "tittle-nosotros tittle-nosotros"
+            "nosotros nosotros"
+            "tittlecuarentena tittlecuarentena"
+            "medidascuarentena medidascuarentena"
+            "tittle-gallery tittle-gallery"
+            "hr hr"
+            "post-list post-list"
+            "hr2 hr2"
+            "o o"
+            "tittle-contactanos tittle-contactanos"
+            "contactanos contactanos"
+            "footer footer"
+        
+           }
+        .subitem.texto{  padding: 0px;}
+        
+        .subitem.texto h2{ font-size: 22.5px;}
+        
+        .subitem.texto p{
+            font-size: 17.5px;
+        }
+        
+        .post-list{
+            display: grid;
+            grid-template: repeat(3,140px )/ repeat(3,140px );
+            gap: 7.5px;
+        }
+        .post-image img,
+        .overlay{
+            width: 140px;
+            height: 140px;
+        }
+        .mapawidth{
+            width: 550px;
+            height: 550px;
+        }}  
+        @media (min-width:700px) and (max-width:800px){
+            .whitetittle,
+            .blacktittle{font-size: 27.5px;}
+            .icon{ width: 22.5px; }
+            
+            .footer h3{ 
+                font-size: 15px;
+                font-family: 'moodern'; }
+            
+            .tittlemedida{ font-size:17.5px; } 
+            
+            .medidas p{
+                font-size: 15px;
+                height: 70px;
+                padding: 0px 20px 0px 20px;
+            }
+            .medidas img{
+                width: 40px;
+            }
+            .medidas-cuarentena{
+                grid-template: 200px/repeat(3,33%);
+            }
+            .container{
+                display: grid;
+                grid-template:  100vh 80px 375.200px 80px 200px 125px 1px 600px 1px 60px 125px 700px 65px/100vw ;
+                height: 100vh;
+                grid-template-areas: 
+                "contenido contenido"
+                 "tittle-nosotros tittle-nosotros"
+                "nosotros nosotros"
+                "tittlecuarentena tittlecuarentena"
+                "medidascuarentena medidascuarentena"
+                "tittle-gallery tittle-gallery"
+                "hr hr"
+                "post-list post-list"
+                "hr2 hr2"
+                "o o"
+                "tittle-contactanos tittle-contactanos"
+                "contactanos contactanos"
+                "footer footer"
+            
+               }
+            .subitem.texto{  padding: 0px;}
+            .subitem.texto h2{ font-size: 25px;}
+            .subitem.texto p{
+                font-size: 17.5px;
+            }
+            
+            .post-list{
+                display: grid;
+                grid-template: repeat(3,175px )/ repeat(3,175px );
+                gap: 7.5px;
+            }
+            .post-image img,
+            .overlay{
+                width: 175px;
+                height: 175px;
+            }
+            .mapawidth{
+                width: 650px;
+                height: 650px;
+            }} 
+            @media (min-width:800px) and (max-width:900px){
+                .whitetittle,
+                .blacktittle{font-size: 30px;}
+                .icon{ width: 22.5px; }
+                
+                .footer h3{ 
+                    font-size: 15px;
+                    font-family: 'moodern'; }
+                
+                .tittlemedida{ font-size:17.5px; } 
+                
+                .medidas p{
+                    font-size: 15px;
+                    height: 70px;
+                    padding: 0px 20px 0px 20px;
+                }
+                .medidas img{
+                    width: 40px;
+                }
+                .medidas-cuarentena{
+                    grid-template: 200px/repeat(3,33%);
+                }
+                .container{
+                    display: grid;
+                    grid-template:  100vh 80px 375.200px 80px 200px 125px 1px 700px 1px 60px 125px 800px 65px/100vw ;
+                    height: 100vh;
+                    grid-template-areas: 
+                    "contenido contenido"
+                     "tittle-nosotros tittle-nosotros"
+                    "nosotros nosotros"
+                    "tittlecuarentena tittlecuarentena"
+                    "medidascuarentena medidascuarentena"
+                    "tittle-gallery tittle-gallery"
+                    "hr hr"
+                    "post-list post-list"
+                    "hr2 hr2"
+                    "o o"
+                    "tittle-contactanos tittle-contactanos"
+                    "contactanos contactanos"
+                    "footer footer"
+                
+                   }
+                .subitem.texto{  padding: 0px;}
+                .subitem.texto h2{ font-size: 30px;}
+                .subitem.texto p{
+                    font-size: 20px;
+                }
+                
+                .post-list{
+                    display: grid;
+                    grid-template: repeat(3,200px )/ repeat(3,200px );
+                    gap: 7.5px;
+                }
+                .post-image img,
+                .overlay{
+                    width: 200px;
+                    height: 200px;
+                }
+                .mapawidth{
+                    width: 750px;
+                    height: 750px;
+                }}
+                @media (min-width:900px) and (max-width:1000px){
+                   
+                    .container{
+                        display: grid;
+                        grid-template:  100vh 80px 475.200px 80px 300px 145px 1px 700px 1px 60px 145px 900px 65px/100vw ;
+                        height: 100vh;
+                        grid-template-areas: 
+                        "contenido contenido"
+                         "tittle-nosotros tittle-nosotros"
+                        "nosotros nosotros"
+                        "tittlecuarentena tittlecuarentena"
+                        "medidascuarentena medidascuarentena"
+                        "tittle-gallery tittle-gallery"
+                        "hr hr"
+                        "post-list post-list"
+                        "hr2 hr2"
+                        "o o"
+                        "tittle-contactanos tittle-contactanos"
+                        "contactanos contactanos"
+                        "footer footer"
+                    
+                    }}
+                @media (min-width:1000px) and (max-width:1100px){
+                   
+                    .container{
+                        display: grid;
+                        grid-template:  100vh 80px 525.200px  80px 300px 145px 1px 700px 1px 60px 145px 900px 65px/100vw ;
+                        height: 100vh;
+                        grid-template-areas: 
+                        "contenido contenido"
+                         "tittle-nosotros tittle-nosotros"
+                        "nosotros nosotros"
+                        "tittlecuarentena tittlecuarentena"
+                        "medidascuarentena medidascuarentena"
+                        "tittle-gallery tittle-gallery"
+                        "hr hr"
+                        "post-list post-list"
+                        "hr2 hr2"
+                        "o o"
+                        "tittle-contactanos tittle-contactanos"
+                        "contactanos contactanos"
+                        "footer footer"
+                    
+                    }}
+                    @media (min-width:1100px) and (max-width:1200px){
+                   
+                        .container{
+                            display: grid;
+                            grid-template:  100vh 80px 575.200px 80px 300px 145px 1px 700px 1px 60px 145px 900px 75px/100vw ;
+                            height: 100vh;
+                            grid-template-areas: 
+                            "contenido contenido"
+                             "tittle-nosotros tittle-nosotros"
+                            "nosotros nosotros"
+                            "tittlecuarentena tittlecuarentena"
+                            "medidascuarentena medidascuarentena"
+                            "tittle-gallery tittle-gallery"
+                            "hr hr"
+                            "post-list post-list"
+                            "hr2 hr2"
+                            "o o"
+                            "tittle-contactanos tittle-contactanos"
+                            "contactanos contactanos"
+                            "footer footer"
+                        
+                        }}
+                        @media (min-width:1200px) and (max-width:1300px){
+                   
+                            .container{
+                                display: grid;
+                                grid-template:  100vh 80px 625.200px 80px 300px 145px 1px 700px 1px 60px 145px 900px 75px/100vw ;
+                                height: 100vh;
+                                grid-template-areas: 
+                                "contenido contenido"
+                                 "tittle-nosotros tittle-nosotros"
+                                "nosotros nosotros"
+                                "tittlecuarentena tittlecuarentena"
+                                "medidascuarentena medidascuarentena"
+                                "tittle-gallery tittle-gallery"
+                                "hr hr"
+                                "post-list post-list"
+                                "hr2 hr2"
+                                "o o"z
+                                "tittle-contactanos tittle-contactanos"
+                                "contactanos contactanos"
+                                "footer footer"
+                            
+                            }}
