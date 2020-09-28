@@ -1,0 +1,27 @@
+.cuarentena{
+    height: 100px;
+    width: 100vw;
+}
+.medidas-cuarentena{
+    width: 100vw;
+    display: grid;
+    grid-template: 300px e("/")repeat(3,300px);
+    justify-content: space-around;
+    background: @color-oscuroclaro;
+    .medidas{
+        .displayflex-center;
+        flex-direction: column;
+        text-align: center;
+        font-family:@fuente-principal;
+        h3{
+            font-size: @fontsizeinicial;
+            padding: 20px 0px;
+        }
+        p{
+            font-size: @fontsizeinicial -10%;
+        }
+        img{
+            width: 50px;
+        }
+    }
+}

@@ -1,0 +1,426 @@
+@media (min-width:300px) and (max-width:700px){
+
+    header{
+        .logo{
+            height: 50px;
+        }
+        .burger{
+            display: block;
+        }
+        .burger,
+    .burgerclose{
+        color: white;
+        width: 20px;
+        height: 20px;
+        padding-right: 10px;
+    }
+    .navmenu{
+        position: absolute;
+        top: 50px;
+        display: none;
+        flex-direction: column;
+        background: rgba(black, 50%);
+        .link{
+            width: 100vw;
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 0px;
+            
+        }
+        .link::after{
+            height: 0px;
+            }
+        .link:hover{
+            background: white;
+            color: black;
+            transition: 2s;
+            }
+    }}
+    .nosotros{
+        grid-template: repeat(4,25%) e("/") repeat(2,50%);
+        .texto{
+            grid-column: 1 e("/") 3;
+            grid-row: 1 e("/") 3;
+            text-align: center;}
+        .foto{
+            grid-column: 1 e("/") 3;
+            grid-row: 3 e("/") 5;}} 
+    .medidas-cuarentena .medidas img{
+        width: 30px;
+    }
+        
+    }
+    
+
+@media (min-width: 700px){
+h1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition: 0.2s ease;
+    background:#EABE3F;
+    left: 40%; right: 40%;
+}
+h1:hover::after{
+    width: 20%;
+    transition: 0.2s ease ;
+}}
+@media (min-width:300px) and (max-width:500px){
+    .tittle{
+        font-size:@fontsizeinicial - 15%;
+    }
+    .nosotros{
+    .texto{
+        h2{
+            font-size: @fontsizeinicial - 7%;}
+        p{
+            font-size: @fontsizeinicial - 12%;
+            padding: 0px 20px;}}}
+    .medidas-cuarentena{
+        .medidas{
+            h3{
+                font-size: @fontsizeinicial - 12%;}
+            p{ font-size: @fontsizeinicial - 15%}
+        }}
+    .footer{
+        h3{
+            font-size: @fontsizeinicial - 10%;}
+        p,a{
+            font-size: @fontsizeinicial - 16%;
+            }}
+    .icon{
+        width: 15px;}}
+
+
+@media (min-width:500px) and (max-width:700px){
+    .tittle{
+        font-size:@fontsizeinicial - 12%;
+    }
+    .nosotros{
+        .texto{
+            h2{
+                font-size: 30px;}
+            p{
+            font-size: @fontsizeinicial - 7%;
+            padding: 0px 20px;}}
+    }
+    .medidas-cuarentena{
+        .medidas{
+            h3{
+                font-size: @fontsizeinicial - 10%;}
+            p{ font-size: @fontsizeinicial - 12%}
+        }}
+    .footer{
+        h3{
+            font-size: @fontsizeinicial - 8%;}
+        p,a{
+            font-size: @fontsizeinicial - 13%;
+            }}
+    .icon{
+        width: 20px;}}
+@media (min-width:700px) and (max-width:1000px){
+    .tittle{
+        font-size:@fontsizeinicial - 10%;
+    }
+    .nosotros{
+        .texto{
+            h2{
+                font-size: @fontsizeinicial - 3%;}
+            p{
+                font-size: @fontsizeinicial - 4%;
+                padding: 0px 20px;}}}
+    .medidas-cuarentena{
+        .medidas{
+            h3{
+                font-size: @fontsizeinicial - 7%;}
+            p{ font-size: @fontsizeinicial - 9%}
+        }}
+    .footer{
+        h3{
+            font-size: @fontsizeinicial - 5%;}
+        p,a{
+            font-size: @fontsizeinicial - 10%;
+            }}
+    .icon{
+        width: 25px;}}
+
+@media (min-width:1000px) and (max-width:1300px){
+    .tittle{
+        font-size:@fontsizeinicial - 7%;
+    }
+    .nosotros{
+        .texto{
+            h2{
+                font-size: @fontsizeinicial - 1%;}
+            p{
+                font-size: @fontsizeinicial - 1%;
+                padding: 0px 20px;}}}
+    .medidas-cuarentena{
+        .medidas{
+            h3{
+                font-size: @fontsizeinicial - 4%;}
+            p{ font-size: @fontsizeinicial - 6%}
+        }}
+    .footer{
+        h3{
+            font-size: @fontsizeinicial - 2%;}
+        p,a{
+            font-size: @fontsizeinicial - 7%;
+            }}
+    .icon{
+        width: 30px;}}
+ 
+@media (min-width:300px) and (max-width:400px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 75px;
+    }
+     // SECCION COVID
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: repeat(3,300px) e("/") repeat(3,85px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,100px) e("/") repeat(3,100px);
+        height: 400px;
+    }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 100px;
+    }
+    .contacto{
+        height: 500px;
+        .mapa{
+            width: 400px;
+            height: 400px;
+        }
+    }}
+@media (min-width:400px) and (max-width:500px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 85px;
+    }
+    // SECCION COVID
+    
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,100px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,100px) e("/") repeat(3,100px);
+        height: 350px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 105px;
+        }
+    .contacto{
+        height: 450px;
+        .mapa{
+            width: 400px;
+            height: 400px;
+            }
+        }}
+@media (min-width:400px) and (max-width:500px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 85px;
+    }
+    // SECCION COVID
+    
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,100px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,125px) e("/") repeat(3,125px);
+        height: 400px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 110px;
+        }
+    .contacto{
+        height: 450px;
+        .mapa{
+            width: 400px;
+            height: 400px;
+            }
+        }}
+
+@media (min-width:500px) and (max-width:600px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 95px;
+    }
+    // SECCION COVID      
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,100px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,150px) e("/") repeat(3,150px);
+        height: 500px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 115px;
+        }
+    .contacto{
+        height: 450px;
+        .mapa{
+            width: 400px;
+            height: 400px;
+            }
+        }}
+@media (min-width:600px) and (max-width:700px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 95px;
+    }
+    // SECCION COVID      
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,100px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,200px) e("/") repeat(3,200px);
+        height: 650px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 120px;
+        }
+    .contacto{
+        height: 650px;
+        .mapa{
+            width: 600px;
+            height: 600px;
+            }
+        }}
+@media (min-width:700px) and (max-width:800px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 105px;
+    }
+    // SECCION COVID      
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,200px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,225px) e("/") repeat(3,225px);
+        height: 700px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 125px;
+        }
+    .contacto{
+        height: 750px;
+        .mapa{
+            width: 700px;
+            height: 700px;
+            }
+        }}
+@media (min-width:800px) and (max-width:900px){
+    // SECCION NOSOTROS
+    .titulonosotros, .titulogaleria, .cuarentena,.o{
+        height: 115px;
+    }
+    // SECCION COVID      
+    .medidas-cuarentena{
+        height: 300px;
+        grid-template: 300px e("/") repeat(3,200px);}
+    // SECCION GALERIA
+    .post-list{
+        grid-template: repeat(3,250px) e("/") repeat(3,250px);
+        height: 800px;
+        }
+    // SECCION CONTACTO
+    .titulocontactanos{
+        height: 135px;
+        }
+    .contacto{
+        height: 850px;
+        .mapa{
+            width: 800px;
+            height: 800px;
+            }
+        }}
+@media (min-width:300px) and (max-width:350px){
+.nosotros{height: 600px;}
+}
+@media (min-width:350px) and (max-width:400px){
+.nosotros{height: 700px;}
+}  
+@media (min-width:400px) and (max-width:450px){
+.nosotros{height: 800px;}    
+}  
+@media (min-width:450px) and (max-width:500px){
+.nosotros{height: 900px;}
+}          
+@media (min-width:500px) and (max-width:550px){
+.nosotros{height: 1000px;}
+}  
+@media (min-width:550px) and (max-width:600px){
+.nosotros{height: 1100px;}
+}  
+@media (min-width:600px) and (max-width:650px){
+.nosotros{height: 1200px;}
+}  
+@media (min-width:650px) and (max-width:700px){
+.nosotros{height: 1300px;}
+}  
+@media (min-width:700px) and (max-width:750px){
+.nosotros{height: 350px;}
+}  
+@media (min-width:750px) and (max-width:800px){
+.nosotros{height: 375px;}
+}  
+@media (min-width:800px) and (max-width:850px){
+.nosotros{height: 400px;}
+}  
+@media (min-width:850px) and (max-width:900px){
+.nosotros{height: 425px;}
+}  
+@media (min-width:900px) and (max-width:950px){
+.nosotros{height: 450px;}
+}  
+@media (min-width:950px) and (max-width:1000px){
+.nosotros{height: 475px;}
+}  
+@media (min-width:1000px) and (max-width:1050px){
+.nosotros{height: 500px;}
+}  
+@media (min-width:1050px) and (max-width:1100px){
+.nosotros{height: 525px;}
+}  
+@media (min-width:1100px) and (max-width:1150px){
+.nosotros{height: 550px;}
+}
+@media (min-width:1150px) and (max-width:1200px){
+.nosotros{height: 575px;}
+}
+@media (min-width:1200px) and (max-width:1250px){
+.nosotros{height: 600px;}
+}
+@media (min-width:1250px) and (max-width:1300px){
+.nosotros{height: 625px;}
+}
+@media (min-width:1300px) and (max-width:1350px){
+.nosotros{height: 650px;}
+}
+@media (min-width:1350px) and (max-width:1400px){
+.nosotros{height: 675px;}
+}
+@media (min-width:1400px) and (max-width:1450px){
+.nosotros{height: 700px;}
+}
+@media (min-width:1450px) and (max-width:1500px){
+.nosotros{height: 725px;}
+}                
+
+

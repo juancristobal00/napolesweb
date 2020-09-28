@@ -1,0 +1,740 @@
+a {
+  color: white;
+}
+* {
+  margin: 0px;
+}
+.main {
+  width: 100vw;
+}
+.displayflex-around {
+  display: flex;
+  justify-content: space-around;
+}
+.displayflex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.displayflex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tittle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.white {
+  background: black;
+  color: white;
+}
+.black {
+  background: white;
+}
+.icon {
+  width: 30px;
+  padding-top: 20px;
+}
+.mapa {
+  width: 1250px;
+  height: 1250px;
+}
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .burger,
+header .burgerclose {
+  display: none;
+  width: 50px;
+  height: 50px;
+}
+header .logo {
+  height: 75px;
+}
+header .navmenu {
+  display: inline-flex;
+  padding-right: 50px;
+}
+header .navmenu .link {
+  color: white;
+  padding: 25px;
+  text-decoration: none;
+  font-family: 'moodern';
+}
+header .navmenu .link::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background: #EABE3F;
+  transition: width 0.3s;
+}
+header .navmenu .link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+.portada {
+  width: 100vw;
+  background-image: url('../img/portada.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.titulonosotros {
+  height: 100px;
+  width: 100vw;
+}
+.nosotros {
+  width: 100vw;
+  display: grid;
+  grid-template: repeat(2, 50%) / repeat(4, 25%);
+  height: 800px;
+}
+.nosotros .texto {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+.nosotros .texto h2 {
+  font-size: 50px;
+  text-align: center;
+  padding: 30px 0px;
+  font-family: 'manhandle slab';
+}
+.nosotros .texto p {
+  font-family: 'moodern';
+}
+.nosotros .foto {
+  grid-column: 3 / 5;
+  grid-row: 1 / 3;
+  background-image: url('../img/foto.jpg');
+  background-size: cover;
+}
+.nosotros:hover h2 {
+  color: #EABE3F;
+}
+.cuarentena {
+  height: 100px;
+  width: 100vw;
+}
+.medidas-cuarentena {
+  width: 100vw;
+  display: grid;
+  grid-template: 300px / repeat(3, 300px);
+  justify-content: space-around;
+  background: #e4e3e3;
+}
+.medidas-cuarentena .medidas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'moodern';
+}
+.medidas-cuarentena .medidas h3 {
+  font-size: 25px;
+  padding: 20px 0px;
+}
+.medidas-cuarentena .medidas p {
+  font-size: 25px -10%;
+}
+.medidas-cuarentena .medidas img {
+  width: 50px;
+}
+.titulogaleria {
+  flex-direction: column;
+  height: 125px;
+  width: 100vw;
+}
+hr {
+  margin: 0px;
+  width: 90%;
+  background: black;
+  border: 1px solid black;
+}
+.hr,
+.hr2 {
+  display: flex;
+  justify-content: center;
+}
+.post-list {
+  width: 100vw;
+  height: 1000px;
+  display: grid;
+  grid-template: repeat(3, 300px) / repeat(3, 300px);
+  justify-content: center;
+  align-content: center;
+}
+.post-list .post {
+  background-image: url('../img/img9.jpg');
+  background-size: cover;
+}
+.hr {
+  grid-area: hr;
+}
+.hr2 {
+  grid-area: hr2;
+}
+.o {
+  width: 100vw;
+  grid-area: o;
+  height: 100px;
+}
+.titulocontactanos {
+  flex-direction: column;
+  height: 150px;
+  width: 100vw;
+}
+.titulocontactanos .icon-contactanos {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  padding-top: 30px;
+}
+.contacto {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1500px;
+  width: 100vw;
+}
+.footer {
+  width: 100vw;
+  display: grid;
+  grid-template: 50px 50px 50px 50px / 45% 45% 10%;
+  height: 200px;
+  background: gray;
+  font-family: 'moodern';
+  font-size: 17px;
+}
+.footer .footermenu,
+.footer .footercontacto {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.footer .footermenu h3,
+.footer .footercontacto h3,
+.footer .footermenu a,
+.footer .footercontacto a {
+  padding: 15px 0px;
+  height: 20px;
+  text-decoration: none;
+}
+.footer .footermenu p,
+.footer .footercontacto p {
+  padding: 27.5px 0px;
+  height: 20px;
+}
+.footer .footercontacto {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+  flex-direction: column;
+}
+.footer .footermenu {
+  grid-column: 2 / 3;
+  grid-row: 1 / 5;
+  flex-direction: column;
+}
+.footer .footerredes {
+  grid-column: 3 / 4;
+  grid-row: 1 / 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer .footerredes .footerRS {
+  padding: 15px 0px;
+}
+@media (min-width: 300px) and (max-width: 700px) {
+  header .logo {
+    height: 50px;
+  }
+  header .burger {
+    display: block;
+  }
+  header .burger,
+  header .burgerclose {
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+  }
+  header .navmenu {
+    position: absolute;
+    top: 50px;
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  header .navmenu .link {
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0px;
+  }
+  header .navmenu .link::after {
+    height: 0px;
+  }
+  header .navmenu .link:hover {
+    background: white;
+    color: black;
+    transition: 2s;
+  }
+  .nosotros {
+    grid-template: repeat(4, 25%) / repeat(2, 50%);
+  }
+  .nosotros .texto {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    text-align: center;
+  }
+  .nosotros .foto {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+  }
+  .medidas-cuarentena .medidas img {
+    width: 30px;
+  }
+}
+@media (min-width: 700px) {
+  h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    transition: 0.2s ease;
+    background: #EABE3F;
+    left: 40%;
+    right: 40%;
+  }
+  h1:hover::after {
+    width: 20%;
+    transition: 0.2s ease;
+  }
+}
+@media (min-width: 300px) and (max-width: 500px) {
+  .tittle {
+    font-size: 10px;
+  }
+  .nosotros .texto h2 {
+    font-size: 18px;
+  }
+  .nosotros .texto p {
+    font-size: 13px;
+    padding: 0px 20px;
+  }
+  .medidas-cuarentena .medidas h3 {
+    font-size: 13px;
+  }
+  .medidas-cuarentena .medidas p {
+    font-size: 10px;
+  }
+  .footer h3 {
+    font-size: 15px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 9px;
+  }
+  .icon {
+    width: 15px;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  .tittle {
+    font-size: 13px;
+  }
+  .nosotros .texto h2 {
+    font-size: 30px;
+  }
+  .nosotros .texto p {
+    font-size: 18px;
+    padding: 0px 20px;
+  }
+  .medidas-cuarentena .medidas h3 {
+    font-size: 15px;
+  }
+  .medidas-cuarentena .medidas p {
+    font-size: 13px;
+  }
+  .footer h3 {
+    font-size: 17px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 12px;
+  }
+  .icon {
+    width: 20px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1000px) {
+  .tittle {
+    font-size: 15px;
+  }
+  .nosotros .texto h2 {
+    font-size: 22px;
+  }
+  .nosotros .texto p {
+    font-size: 21px;
+    padding: 0px 20px;
+  }
+  .medidas-cuarentena .medidas h3 {
+    font-size: 18px;
+  }
+  .medidas-cuarentena .medidas p {
+    font-size: 16px;
+  }
+  .footer h3 {
+    font-size: 20px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 15px;
+  }
+  .icon {
+    width: 25px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1300px) {
+  .tittle {
+    font-size: 18px;
+  }
+  .nosotros .texto h2 {
+    font-size: 24px;
+  }
+  .nosotros .texto p {
+    font-size: 24px;
+    padding: 0px 20px;
+  }
+  .medidas-cuarentena .medidas h3 {
+    font-size: 21px;
+  }
+  .medidas-cuarentena .medidas p {
+    font-size: 19px;
+  }
+  .footer h3 {
+    font-size: 23px;
+  }
+  .footer p,
+  .footer a {
+    font-size: 18px;
+  }
+  .icon {
+    width: 30px;
+  }
+}
+@media (min-width: 300px) and (max-width: 400px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 75px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: repeat(3, 300px) / repeat(3, 85px);
+  }
+  .post-list {
+    grid-template: repeat(3, 100px) / repeat(3, 100px);
+    height: 400px;
+  }
+  .titulocontactanos {
+    height: 100px;
+  }
+  .contacto {
+    height: 500px;
+  }
+  .contacto .mapa {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 85px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 100px);
+  }
+  .post-list {
+    grid-template: repeat(3, 100px) / repeat(3, 100px);
+    height: 350px;
+  }
+  .titulocontactanos {
+    height: 105px;
+  }
+  .contacto {
+    height: 450px;
+  }
+  .contacto .mapa {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 85px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 100px);
+  }
+  .post-list {
+    grid-template: repeat(3, 125px) / repeat(3, 125px);
+    height: 400px;
+  }
+  .titulocontactanos {
+    height: 110px;
+  }
+  .contacto {
+    height: 450px;
+  }
+  .contacto .mapa {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 95px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 100px);
+  }
+  .post-list {
+    grid-template: repeat(3, 150px) / repeat(3, 150px);
+    height: 500px;
+  }
+  .titulocontactanos {
+    height: 115px;
+  }
+  .contacto {
+    height: 450px;
+  }
+  .contacto .mapa {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media (min-width: 600px) and (max-width: 700px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 95px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 100px);
+  }
+  .post-list {
+    grid-template: repeat(3, 200px) / repeat(3, 200px);
+    height: 650px;
+  }
+  .titulocontactanos {
+    height: 120px;
+  }
+  .contacto {
+    height: 650px;
+  }
+  .contacto .mapa {
+    width: 600px;
+    height: 600px;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 105px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 200px);
+  }
+  .post-list {
+    grid-template: repeat(3, 225px) / repeat(3, 225px);
+    height: 700px;
+  }
+  .titulocontactanos {
+    height: 125px;
+  }
+  .contacto {
+    height: 750px;
+  }
+  .contacto .mapa {
+    width: 700px;
+    height: 700px;
+  }
+}
+@media (min-width: 800px) and (max-width: 900px) {
+  .titulonosotros,
+  .titulogaleria,
+  .cuarentena,
+  .o {
+    height: 115px;
+  }
+  .medidas-cuarentena {
+    height: 300px;
+    grid-template: 300px / repeat(3, 200px);
+  }
+  .post-list {
+    grid-template: repeat(3, 250px) / repeat(3, 250px);
+    height: 800px;
+  }
+  .titulocontactanos {
+    height: 135px;
+  }
+  .contacto {
+    height: 850px;
+  }
+  .contacto .mapa {
+    width: 800px;
+    height: 800px;
+  }
+}
+@media (min-width: 300px) and (max-width: 350px) {
+  .nosotros {
+    height: 600px;
+  }
+}
+@media (min-width: 350px) and (max-width: 400px) {
+  .nosotros {
+    height: 700px;
+  }
+}
+@media (min-width: 400px) and (max-width: 450px) {
+  .nosotros {
+    height: 800px;
+  }
+}
+@media (min-width: 450px) and (max-width: 500px) {
+  .nosotros {
+    height: 900px;
+  }
+}
+@media (min-width: 500px) and (max-width: 550px) {
+  .nosotros {
+    height: 1000px;
+  }
+}
+@media (min-width: 550px) and (max-width: 600px) {
+  .nosotros {
+    height: 1100px;
+  }
+}
+@media (min-width: 600px) and (max-width: 650px) {
+  .nosotros {
+    height: 1200px;
+  }
+}
+@media (min-width: 650px) and (max-width: 700px) {
+  .nosotros {
+    height: 1300px;
+  }
+}
+@media (min-width: 700px) and (max-width: 750px) {
+  .nosotros {
+    height: 350px;
+  }
+}
+@media (min-width: 750px) and (max-width: 800px) {
+  .nosotros {
+    height: 375px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .nosotros {
+    height: 400px;
+  }
+}
+@media (min-width: 850px) and (max-width: 900px) {
+  .nosotros {
+    height: 425px;
+  }
+}
+@media (min-width: 900px) and (max-width: 950px) {
+  .nosotros {
+    height: 450px;
+  }
+}
+@media (min-width: 950px) and (max-width: 1000px) {
+  .nosotros {
+    height: 475px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1050px) {
+  .nosotros {
+    height: 500px;
+  }
+}
+@media (min-width: 1050px) and (max-width: 1100px) {
+  .nosotros {
+    height: 525px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1150px) {
+  .nosotros {
+    height: 550px;
+  }
+}
+@media (min-width: 1150px) and (max-width: 1200px) {
+  .nosotros {
+    height: 575px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1250px) {
+  .nosotros {
+    height: 600px;
+  }
+}
+@media (min-width: 1250px) and (max-width: 1300px) {
+  .nosotros {
+    height: 625px;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1350px) {
+  .nosotros {
+    height: 650px;
+  }
+}
+@media (min-width: 1350px) and (max-width: 1400px) {
+  .nosotros {
+    height: 675px;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1450px) {
+  .nosotros {
+    height: 700px;
+  }
+}
+@media (min-width: 1450px) and (max-width: 1500px) {
+  .nosotros {
+    height: 725px;
+  }
+}
