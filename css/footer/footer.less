@@ -1,0 +1,45 @@
+.footer{
+    width: 100vw;
+    display: grid;
+    grid-template: 50px 50px 50px 50px e("/") 45% 45% 10%;
+    height: 200px;
+    background: gray;
+    font-family: @fuente-principal;
+    font-size: 17px;
+    .footermenu,.footercontacto{
+        color: @color-claro;
+        display: flex;   
+        align-items: center;
+        
+        h3,a{
+            padding: 15px 0px;
+            height: 20px;
+            text-decoration: none;
+        }
+        p{
+            padding: 27.5px 0px;
+            height: 20px;
+        }
+    }
+    .footercontacto{
+        grid-column: 1 e("/") 2 ;
+        grid-row: 1 e("/") 5;
+        flex-direction: column;
+    }
+    .footermenu{
+        grid-column: 2 e("/") 3;
+        grid-row: 1 e("/") 5;
+        flex-direction: column;
+    }
+    .footerredes{
+        grid-column: 3 e("/") 4;
+        grid-row: 1 e("/") 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+            .footerRS{
+                padding:15px 0px;
+            }
+    }
+}

@@ -1,0 +1,35 @@
+.titulogaleria{
+    flex-direction: column;
+    height: 125px;
+    width: 100vw;
+}
+hr{
+ margin: 0px;
+    width: 90%;
+    background: black;
+    border: 1px solid black;
+}
+.hr,.hr2{
+ display: flex;
+ justify-content: center;
+}
+.post-list{
+width: 100vw;
+height: 1000px;
+display: grid;
+grid-template: repeat(3,300px) e("/") repeat(3,300px);
+justify-content: center;
+align-content: center;
+ .post{
+     background-image: url('../img/img9.jpg');
+     background-size: cover;
+ }
+}
+.hr{ grid-area: hr;}
+.hr2{grid-area: hr2;}
+
+.o{
+    width: 100vw;
+    grid-area: o;
+    height: 100px;
+}
